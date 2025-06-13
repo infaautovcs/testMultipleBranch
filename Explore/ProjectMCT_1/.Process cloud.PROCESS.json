@@ -1,0 +1,50 @@
+{
+  "objectInfo" : {
+    "id" : "cHM5YOp0Q0bdkr6eCnZLYC",
+    "name" : "Process cloud",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "VZ6or3rp3yD7tyG-gt-214-2022-09-09T07:54:59.773Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-06-13T09:12:36.722Z",
+  "objectRefs" : [ {
+    "id" : "90Bm5Dm2tDJflVh1vC9aYm",
+    "name" : "MappingTask1",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0137C20Z00000000000D"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/ProjectMCT_1"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

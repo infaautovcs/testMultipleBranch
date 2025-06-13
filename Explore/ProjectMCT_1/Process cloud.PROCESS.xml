@@ -1,0 +1,75 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>VZ6or3rp3yD7tyG-gt-214-2022-09-09T07:54:59.773Z::pd.xml</types1:EntryId>
+      <types1:Name>Process_cloud</types1:Name>
+      <types1:MimeType>application/xml+process</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags>.anonymous</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>aws_staging</types1:CreatedBy>
+      <types1:CreationDate>2022-09-09T07:55:00Z</types1:CreationDate>
+      <types1:ModifiedBy>aws_staging</types1:ModifiedBy>
+      <types1:ModificationDate>2022-09-09T07:55:40Z</types1:ModificationDate>
+      <types1:PublicationStatus>published</types1:PublicationStatus>
+      <types1:PublishedBy>aws_staging</types1:PublishedBy>
+      <types1:PublicationDate>2022-09-09T07:55:44Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/spi.Process_cloud/Process_cloud.pd.xml</types1:PublishedContributionId>
+      <types1:Entry>
+         <process xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2010/10/avosScreenflow.xsd"
+                  xmlns:tfm="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"
+                  xmlns:list="urn:activevos:spi:list:functions"
+                  displayName="Process cloud"
+                  name="Process_cloud"
+                  overrideAPIName="false">
+            <parameterSet xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2021/04/taskflowModel.xsd"/>
+            <appliesTo/>
+            <description/>
+            <tags>.anonymous</tags>
+            <generator>Informatica Process Designer 11</generator>
+            <output>
+               <field description="" name="result" type="string">
+                  <options>
+                     <option name="required">false</option>
+                  </options>
+               </field>
+            </output>
+            <notes/>
+            <deployment suspendOnFault="false" tracingLevel="verbose">
+               <rest>
+                  <allowAnonymousAccess/>
+               </rest>
+            </deployment>
+            <flow id="a">
+               <start id="b">
+                  <link id="l7u60mjp" targetId="l7u60mjo"/>
+               </start>
+               <service id="l7u60mjo">
+                  <title>Run Cloud Task</title>
+                  <serviceName>ICSExecuteTask</serviceName>
+                  <serviceGUID/>
+                  <serviceInput>
+                     <parameter name="Task Name" source="constant">MappingTask1 [MCT]</parameter>
+                     <parameter name="Wait for Task to Complete" source="constant">true</parameter>
+                     <parameter name="Fail on Cloud Task Errors" source="constant">false</parameter>
+                     <parameter name="GUID" source="constant">90Bm5Dm2tDJflVh1vC9aYm</parameter>
+                  </serviceInput>
+                  <link id="l7u60mk0" targetId="l7u60mjz"/>
+               </service>
+               <assignment id="l7u60mjz">
+                  <title>Assignment to result</title>
+                  <operation source="field" to="output.result">output.Task Status</operation>
+                  <link id="l7u60mk1" targetId="c"/>
+               </assignment>
+               <end id="c"/>
+            </flow>
+         </process>
+      </types1:Entry>
+      <types1:GUID>cHM5YOp0Q0bdkr6eCnZLYC</types1:GUID>
+      <types1:DisplayName>Process cloud</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-06-13T09:12:35.779Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

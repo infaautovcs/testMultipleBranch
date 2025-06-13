@@ -1,0 +1,293 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping4",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2021-12-01T18:36:33.124Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CountryRevenue"
+            },
+            "name" : "CountryRevenue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "custCountry"
+            },
+            "name" : "custCountry",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "RevenueYear"
+            },
+            "name" : "RevenueYear",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@ju8ybJwoE4OkMZs1sDQwmn",
+          "connectionName" : "Sample AzureSynapse Connection",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "tblGeoRevenueSummary",
+            "label" : "tblGeoRevenueSummary",
+            "objectName" : "tblGeoRevenueSummary",
+            "objectType" : "Standard Records",
+            "path" : "tblGeoRevenueSummary",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CountryRevenue",
+                "fieldType" : "CONNECTOR",
+                "label" : "CountryRevenue",
+                "nativeName" : "CountryRevenue",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tblGeoRevenueSummary"
+                  }
+                ]
+              },
+              {
+                "name" : "custCountry",
+                "fieldType" : "CONNECTOR",
+                "label" : "custCountry",
+                "nativeName" : "custCountry",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tblGeoRevenueSummary"
+                  }
+                ]
+              },
+              {
+                "name" : "RevenueYear",
+                "fieldType" : "CONNECTOR",
+                "label" : "RevenueYear",
+                "nativeName" : "RevenueYear",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tblGeoRevenueSummary"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2021-12-01T18:36:33.130Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CountryRevenue"
+            },
+            "name" : "CountryRevenue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "custCountry"
+            },
+            "name" : "custCountry",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "RevenueYear"
+            },
+            "name" : "RevenueYear",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@ju8ybJwoE4OkMZs1sDQwmn",
+          "connectionName" : "Sample AzureSynapse Connection",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "tblGeoRevenueSummary",
+            "label" : "tblGeoRevenueSummary",
+            "objectName" : "tblGeoRevenueSummary",
+            "objectType" : "Standard Records",
+            "path" : "tblGeoRevenueSummary",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CountryRevenue",
+                "fieldType" : "CONNECTOR",
+                "label" : "CountryRevenue",
+                "nativeName" : "CountryRevenue",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tblGeoRevenueSummary"
+                  }
+                ]
+              },
+              {
+                "name" : "custCountry",
+                "fieldType" : "CONNECTOR",
+                "label" : "custCountry",
+                "nativeName" : "custCountry",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tblGeoRevenueSummary"
+                  }
+                ]
+              },
+              {
+                "name" : "RevenueYear",
+                "fieldType" : "CONNECTOR",
+                "label" : "RevenueYear",
+                "nativeName" : "RevenueYear",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "tblGeoRevenueSummary"
+                  }
+                ]
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-06-13 02:12:34 PDT"
+}

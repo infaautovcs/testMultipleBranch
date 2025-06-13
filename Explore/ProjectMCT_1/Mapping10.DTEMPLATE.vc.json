@@ -1,0 +1,563 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping10",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2023-02-08T23:46:58.031Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "id"
+            },
+            "name" : "id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "activityId"
+            },
+            "name" : "activityId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "activityDate"
+            },
+            "name" : "activityDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "activityTypeId"
+            },
+            "name" : "activityTypeId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "primaryAttributeValueId"
+            },
+            "name" : "primaryAttributeValueId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "primaryAttributeValue"
+            },
+            "name" : "primaryAttributeValue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "attributeName"
+            },
+            "name" : "attributeName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "attributeValue"
+            },
+            "name" : "attributeValue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@0uG0XrPsPEsbLr8dUWtRAt",
+          "connectionName" : "Sample Marketo Connection",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "LeadActivity",
+            "label" : "LeadActivity",
+            "objectName" : "LeadActivity",
+            "objectType" : "Standard Records",
+            "path" : "LeadActivity",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "id",
+                "fieldType" : "CONNECTOR",
+                "label" : "id",
+                "nativeName" : "id",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "activityId",
+                "fieldType" : "CONNECTOR",
+                "label" : "activityId",
+                "nativeName" : "activityId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "activityDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "activityDate",
+                "nativeName" : "activityDate",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "activityTypeId",
+                "fieldType" : "CONNECTOR",
+                "label" : "activityTypeId",
+                "nativeName" : "activityTypeId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "primaryAttributeValueId",
+                "fieldType" : "CONNECTOR",
+                "label" : "primaryAttributeValueId",
+                "nativeName" : "primaryAttributeValueId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "primaryAttributeValue",
+                "fieldType" : "CONNECTOR",
+                "label" : "primaryAttributeValue",
+                "nativeName" : "primaryAttributeValue",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "attributeName",
+                "fieldType" : "CONNECTOR",
+                "label" : "attributeName",
+                "nativeName" : "attributeName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "attributeValue",
+                "fieldType" : "CONNECTOR",
+                "label" : "attributeValue",
+                "nativeName" : "attributeValue",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2023-02-08T23:46:58.031Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "id"
+            },
+            "name" : "id",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "activityId"
+            },
+            "name" : "activityId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "activityDate"
+            },
+            "name" : "activityDate",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "activityTypeId"
+            },
+            "name" : "activityTypeId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "primaryAttributeValueId"
+            },
+            "name" : "primaryAttributeValueId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "primaryAttributeValue"
+            },
+            "name" : "primaryAttributeValue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "attributeName"
+            },
+            "name" : "attributeName",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "attributeValue"
+            },
+            "name" : "attributeValue",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 256,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@0uG0XrPsPEsbLr8dUWtRAt",
+          "connectionName" : "Sample Marketo Connection",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "LeadActivity",
+            "label" : "LeadActivity",
+            "objectName" : "LeadActivity",
+            "objectType" : "Standard Records",
+            "path" : "LeadActivity",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "id",
+                "fieldType" : "CONNECTOR",
+                "label" : "id",
+                "nativeName" : "id",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "activityId",
+                "fieldType" : "CONNECTOR",
+                "label" : "activityId",
+                "nativeName" : "activityId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "activityDate",
+                "fieldType" : "CONNECTOR",
+                "label" : "activityDate",
+                "nativeName" : "activityDate",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "activityTypeId",
+                "fieldType" : "CONNECTOR",
+                "label" : "activityTypeId",
+                "nativeName" : "activityTypeId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "primaryAttributeValueId",
+                "fieldType" : "CONNECTOR",
+                "label" : "primaryAttributeValueId",
+                "nativeName" : "primaryAttributeValueId",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "primaryAttributeValue",
+                "fieldType" : "CONNECTOR",
+                "label" : "primaryAttributeValue",
+                "nativeName" : "primaryAttributeValue",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "attributeName",
+                "fieldType" : "CONNECTOR",
+                "label" : "attributeName",
+                "nativeName" : "attributeName",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              },
+              {
+                "name" : "attributeValue",
+                "fieldType" : "CONNECTOR",
+                "label" : "attributeValue",
+                "nativeName" : "attributeValue",
+                "nativeType" : "string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "LeadActivity"
+                  }
+                ]
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-06-13 02:12:33 PDT"
+}

@@ -1,0 +1,199 @@
+{
+  "name" : "400_MappingTasks_asset_500",
+  "description" : "mapping task description",
+  "errorTaskEmail" : {
+    "emails" : "podvalidationplatform@gmail.com"
+  },
+  "successTaskEmail" : {
+    "emails" : "podvalidationplatform@gmail.com"
+  },
+  "warningTaskEmail" : {
+    "emails" : "podvalidationplatform@gmail.com"
+  },
+  "runtimeEnvironmentId" : "@af83ZOuReCoeVDq9nG3v6N",
+  "runtimeEnvironmentName" : "ptfmprodstaging",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$SQLSERVER_Source_DEPT$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "SQLSERVER_Source_DEPT",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "flags" : "SUPPORTS_MULTI_SCHEMA",
+        "originalPath" : "SQLSERVER_Source_DEPT"
+      },
+      "sourceConnectionId" : "@5bNBxvCLCc6cpnmOaG178p",
+      "connectionName" : "S8_SQLSERVER2K8_1",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "R24H_ADEPT1",
+          "label" : "R24H_ADEPT1",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "R24H_ADEPT1",
+            "label" : "R24H_ADEPT1",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$SQLSERVER_Source_EMP$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "SQLSERVER_Source_EMP",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "flags" : "SUPPORTS_MULTI_SCHEMA",
+        "originalPath" : "SQLSERVER_Source_EMP"
+      },
+      "sourceConnectionId" : "@5bNBxvCLCc6cpnmOaG178p",
+      "connectionName" : "S8_SQLSERVER2K8_1",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "R24H_EMP1",
+          "label" : "R24H_EMP1",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "R24H_EMP1",
+            "label" : "R24H_EMP1",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    },
+    {
+      "name" : "$sqlserver_target$",
+      "type" : "TARGET",
+      "label" : "sqlserver_target",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "false",
+        "originalPath" : "sqlserver_target"
+      },
+      "targetConnectionId" : "@1c3Ap3DEHwXlJyA9pJXZ47",
+      "connectionName" : "CSV_TGT_UTF",
+      "targetObject" : "AUTO_MAT_EMPDEP1.csv",
+      "targetObjectLabel" : "AUTO_MAT_EMPDEP1.csv",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : true,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "AUTO_MAT_EMPDEP1.csv",
+      "objectLabel" : "AUTO_MAT_EMPDEP1.csv",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "unspecified" : false,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@a9ekQNu3ByykXYfNZ78AyZ",
+  "mappingTemplateName" : "auto_sqlserver_Joiner_csv",
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : false,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "schemaMode" : "async",
+  "executionEngine" : "SPARK",
+  "valid" : true,
+  "optimizationPlan" : "NONE",
+  "allowMaxFieldLength" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-06-13 02:12:35 PDT"
+}

