@@ -1,0 +1,798 @@
+{
+  "content" : {
+    "description" : "Mapping",
+    "allowMaxFieldLength" : "false",
+    "name" : "auto_sqlserver_Joiner_csv",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "SQLSERVER_Source_EMP -> JoinerTx",
+        "groupLink" : "DefaultGroup -> Detail"
+      },
+      {
+        "link" : "SQLSERVER_Source_DEPT -> JoinerTx",
+        "groupLink" : "DefaultGroup -> Master"
+      },
+      {
+        "link" : "JoinerTx -> sqlserver_target",
+        "groupLink" : "OutputGroup -> DefaultGroup"
+      }
+    ],
+    "transformations" : [
+      {
+        "description" : "sqlserver_source tx description\n\n",
+        "name" : "SQLSERVER_Source_EMP",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "EMPID"
+            },
+            "name" : "EMPID",
+            "platformType" : {
+              "name" : "double"
+            },
+            "precision" : 15,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPNAME"
+            },
+            "name" : "EMPNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 45,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPSTARTDATE"
+            },
+            "name" : "EMPSTARTDATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPADDRESS"
+            },
+            "name" : "EMPADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 45,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPID"
+            },
+            "name" : "DEPID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 45,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@08z7SYEsAIEcZds2787WkG",
+          "connectionName" : "S8_SQLSERVER2K8",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "R24H_EMP1",
+            "label" : "R24H_EMP1",
+            "path" : "R24H_EMP1",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "EMPID",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPID",
+                "nativeType" : "float",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_EMP1"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPNAME",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 45,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_EMP1"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPSTARTDATE",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPSTARTDATE",
+                "nativeType" : "timestamp",
+                "original" : "false",
+                "precision" : 23,
+                "scale" : 3,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_EMP1"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPADDRESS",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPADDRESS",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 45,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_EMP1"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPID",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 45,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_EMP1"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "sqlserver_source tx description\n\n",
+        "name" : "SQLSERVER_Source_DEPT",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "DDEPID"
+            },
+            "name" : "DDEPID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 45,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPNAME"
+            },
+            "name" : "DEPNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 45,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPDATE"
+            },
+            "name" : "DEPDATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9
+          },
+          {
+            "adapterField" : {
+              "name" : "NOOFEMP"
+            },
+            "name" : "NOOFEMP",
+            "platformType" : {
+              "name" : "double"
+            },
+            "precision" : 15,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@08z7SYEsAIEcZds2787WkG",
+          "connectionName" : "S8_SQLSERVER2K8",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "R24H_ADEPT1",
+            "label" : "R24H_ADEPT1",
+            "path" : "R24H_ADEPT1",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "DDEPID",
+                "fieldType" : "UNDEFINED",
+                "label" : "DDEPID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 45,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_ADEPT1"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPNAME",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 45,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_ADEPT1"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPDATE",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPDATE",
+                "nativeType" : "timestamp",
+                "original" : "false",
+                "precision" : 23,
+                "scale" : 3,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_ADEPT1"
+                  }
+                ]
+              },
+              {
+                "name" : "NOOFEMP",
+                "fieldType" : "UNDEFINED",
+                "label" : "NOOFEMP",
+                "nativeType" : "float",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "R24H_ADEPT1"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Joiner\n\n",
+        "name" : "JoinerTx",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Master",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "true",
+            "name" : "Detail",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "OutputGroup",
+            "output" : "true"
+          }
+        ],
+        "joinType" : "Normal Join",
+        "joinConditions" : [
+          {
+            "leftOperand" : "DDEPID",
+            "operator" : "=",
+            "rightOperand" : "DEPID"
+          }
+        ]
+      },
+      {
+        "name" : "sqlserver_target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "EMPNAME"
+                  },
+                  {
+                    "inputName" : "EMPSTARTDATE"
+                  },
+                  {
+                    "inputName" : "DEPNAME"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "EMPID"
+            },
+            "name" : "EMPID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPNAME"
+            },
+            "name" : "EMPNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPSTARTDATE"
+            },
+            "name" : "EMPSTARTDATE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPADDRESS"
+            },
+            "name" : "EMPADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMPDEPID"
+            },
+            "name" : "EMPDEPID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPID"
+            },
+            "name" : "DEPID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPNAME"
+            },
+            "name" : "DEPNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPDATE"
+            },
+            "name" : "DEPDATE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DEPNOOFEMP"
+            },
+            "name" : "DEPNOOFEMP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@9g0EK1M8L5oiwWPRlmNJwZ",
+          "connectionName" : "CSV_TGT_UTF",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "AUTO_MAT_EMPDEP1.csv",
+            "label" : "AUTO_MAT_EMPDEP1.csv",
+            "path" : "AUTO_MAT_EMPDEP1.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "EMPID",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPNAME",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPNAME",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPSTARTDATE",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPSTARTDATE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPADDRESS",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPADDRESS",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EMPDEPID",
+                "fieldType" : "UNDEFINED",
+                "label" : "EMPDEPID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPID",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPNAME",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPNAME",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPDATE",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPDATE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DEPNOOFEMP",
+                "fieldType" : "UNDEFINED",
+                "label" : "DEPNOOFEMP",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "AUTO_MAT_EMPDEP1.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "true",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "DEPNAME",
+              "toField" : {
+                "name" : "DEPNAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "DEPDATE",
+              "toField" : {
+                "name" : "DEPDATE"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EMPID",
+              "toField" : {
+                "name" : "EMPID"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EMPNAME",
+              "toField" : {
+                "name" : "EMPNAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EMPSTARTDATE",
+              "toField" : {
+                "name" : "EMPSTARTDATE"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "EMPADDRESS",
+              "toField" : {
+                "name" : "EMPADDRESS"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "DEPID",
+              "toField" : {
+                "name" : "DEPID"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "NOOFEMP",
+              "toField" : {
+                "name" : "DEPNOOFEMP"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "DDEPID",
+              "toField" : {
+                "name" : "EMPDEPID"
+              },
+              "fromFieldNames" : null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-10 23:15:49 PDT"
+}
