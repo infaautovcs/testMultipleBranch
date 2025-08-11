@@ -1,0 +1,1368 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "Mapping_FlatFile_undo",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-05-12T06:57:23.126Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "ID"
+            },
+            "name" : "ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F1_TESTCASE"
+            },
+            "name" : "F1_TESTCASE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F2_BIGINT_DEF"
+            },
+            "name" : "F2_BIGINT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F3_BIT_DEF"
+            },
+            "name" : "F3_BIT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F4_CHAR_DEF"
+            },
+            "name" : "F4_CHAR_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F5_DATETIME_DEF"
+            },
+            "name" : "F5_DATETIME_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F6_DECIMAL_DEF"
+            },
+            "name" : "F6_DECIMAL_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F7_FLOAT_DEF"
+            },
+            "name" : "F7_FLOAT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F8_INT_DEF"
+            },
+            "name" : "F8_INT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F9_MONEY_DEF"
+            },
+            "name" : "F9_MONEY_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F10_NUMERIC_DEF"
+            },
+            "name" : "F10_NUMERIC_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F11_REAL_DEF"
+            },
+            "name" : "F11_REAL_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F12_SMALLDATETIME_DEF"
+            },
+            "name" : "F12_SMALLDATETIME_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F13_SMALLINT_DEF"
+            },
+            "name" : "F13_SMALLINT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F14_SMALLMONEY_DEF"
+            },
+            "name" : "F14_SMALLMONEY_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F15_TEXT_DEF"
+            },
+            "name" : "F15_TEXT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F16_TINYINT_DEF"
+            },
+            "name" : "F16_TINYINT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F17_VARCHAR_DEF"
+            },
+            "name" : "F17_VARCHAR_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F18_DATE_DEF"
+            },
+            "name" : "F18_DATE_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F18_TIME_DEF"
+            },
+            "name" : "F18_TIME_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F19_DATETIMEOFFSET_DEF"
+            },
+            "name" : "F19_DATETIMEOFFSET_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F20_DATETIME2_DEF"
+            },
+            "name" : "F20_DATETIME2_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@1OqJWetqPSbicznuiZdW6N",
+          "connectionName" : "flatfile_undo_2",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "out_test.csv",
+            "label" : "out_test.csv",
+            "objectName" : "out_test.csv",
+            "path" : "out_test.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "ID",
+                "nativeName" : "ID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F1_TESTCASE",
+                "fieldType" : "CONNECTOR",
+                "label" : "F1_TESTCASE",
+                "nativeName" : "F1_TESTCASE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F2_BIGINT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F2_BIGINT_DEF",
+                "nativeName" : "F2_BIGINT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F3_BIT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F3_BIT_DEF",
+                "nativeName" : "F3_BIT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F4_CHAR_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F4_CHAR_DEF",
+                "nativeName" : "F4_CHAR_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F5_DATETIME_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F5_DATETIME_DEF",
+                "nativeName" : "F5_DATETIME_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F6_DECIMAL_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F6_DECIMAL_DEF",
+                "nativeName" : "F6_DECIMAL_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F7_FLOAT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F7_FLOAT_DEF",
+                "nativeName" : "F7_FLOAT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F8_INT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F8_INT_DEF",
+                "nativeName" : "F8_INT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F9_MONEY_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F9_MONEY_DEF",
+                "nativeName" : "F9_MONEY_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F10_NUMERIC_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F10_NUMERIC_DEF",
+                "nativeName" : "F10_NUMERIC_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F11_REAL_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F11_REAL_DEF",
+                "nativeName" : "F11_REAL_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F12_SMALLDATETIME_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F12_SMALLDATETIME_DEF",
+                "nativeName" : "F12_SMALLDATETIME_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F13_SMALLINT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F13_SMALLINT_DEF",
+                "nativeName" : "F13_SMALLINT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F14_SMALLMONEY_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F14_SMALLMONEY_DEF",
+                "nativeName" : "F14_SMALLMONEY_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F15_TEXT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F15_TEXT_DEF",
+                "nativeName" : "F15_TEXT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F16_TINYINT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F16_TINYINT_DEF",
+                "nativeName" : "F16_TINYINT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F17_VARCHAR_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F17_VARCHAR_DEF",
+                "nativeName" : "F17_VARCHAR_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F18_DATE_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F18_DATE_DEF",
+                "nativeName" : "F18_DATE_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F18_TIME_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F18_TIME_DEF",
+                "nativeName" : "F18_TIME_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F19_DATETIMEOFFSET_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F19_DATETIMEOFFSET_DEF",
+                "nativeName" : "F19_DATETIMEOFFSET_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F20_DATETIME2_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F20_DATETIME2_DEF",
+                "nativeName" : "F20_DATETIME2_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-05-12T06:57:23.129Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "ID"
+            },
+            "name" : "ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F1_TESTCASE"
+            },
+            "name" : "F1_TESTCASE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F2_BIGINT_DEF"
+            },
+            "name" : "F2_BIGINT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F3_BIT_DEF"
+            },
+            "name" : "F3_BIT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F4_CHAR_DEF"
+            },
+            "name" : "F4_CHAR_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F5_DATETIME_DEF"
+            },
+            "name" : "F5_DATETIME_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F6_DECIMAL_DEF"
+            },
+            "name" : "F6_DECIMAL_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F7_FLOAT_DEF"
+            },
+            "name" : "F7_FLOAT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F8_INT_DEF"
+            },
+            "name" : "F8_INT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F9_MONEY_DEF"
+            },
+            "name" : "F9_MONEY_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F10_NUMERIC_DEF"
+            },
+            "name" : "F10_NUMERIC_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F11_REAL_DEF"
+            },
+            "name" : "F11_REAL_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F12_SMALLDATETIME_DEF"
+            },
+            "name" : "F12_SMALLDATETIME_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F13_SMALLINT_DEF"
+            },
+            "name" : "F13_SMALLINT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F14_SMALLMONEY_DEF"
+            },
+            "name" : "F14_SMALLMONEY_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F15_TEXT_DEF"
+            },
+            "name" : "F15_TEXT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F16_TINYINT_DEF"
+            },
+            "name" : "F16_TINYINT_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F17_VARCHAR_DEF"
+            },
+            "name" : "F17_VARCHAR_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F18_DATE_DEF"
+            },
+            "name" : "F18_DATE_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F18_TIME_DEF"
+            },
+            "name" : "F18_TIME_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F19_DATETIMEOFFSET_DEF"
+            },
+            "name" : "F19_DATETIMEOFFSET_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "F20_DATETIME2_DEF"
+            },
+            "name" : "F20_DATETIME2_DEF",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@9g0EK1M8L5oiwWPRlmNJwZ",
+          "connectionName" : "CSV_TGT_UTF",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "out_test.csv",
+            "label" : "out_test.csv",
+            "objectName" : "out_test.csv",
+            "path" : "out_test.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "ID",
+                "fieldType" : "CONNECTOR",
+                "label" : "ID",
+                "nativeName" : "ID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F1_TESTCASE",
+                "fieldType" : "CONNECTOR",
+                "label" : "F1_TESTCASE",
+                "nativeName" : "F1_TESTCASE",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F2_BIGINT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F2_BIGINT_DEF",
+                "nativeName" : "F2_BIGINT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F3_BIT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F3_BIT_DEF",
+                "nativeName" : "F3_BIT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F4_CHAR_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F4_CHAR_DEF",
+                "nativeName" : "F4_CHAR_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F5_DATETIME_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F5_DATETIME_DEF",
+                "nativeName" : "F5_DATETIME_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F6_DECIMAL_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F6_DECIMAL_DEF",
+                "nativeName" : "F6_DECIMAL_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F7_FLOAT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F7_FLOAT_DEF",
+                "nativeName" : "F7_FLOAT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F8_INT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F8_INT_DEF",
+                "nativeName" : "F8_INT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F9_MONEY_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F9_MONEY_DEF",
+                "nativeName" : "F9_MONEY_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F10_NUMERIC_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F10_NUMERIC_DEF",
+                "nativeName" : "F10_NUMERIC_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F11_REAL_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F11_REAL_DEF",
+                "nativeName" : "F11_REAL_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F12_SMALLDATETIME_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F12_SMALLDATETIME_DEF",
+                "nativeName" : "F12_SMALLDATETIME_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F13_SMALLINT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F13_SMALLINT_DEF",
+                "nativeName" : "F13_SMALLINT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F14_SMALLMONEY_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F14_SMALLMONEY_DEF",
+                "nativeName" : "F14_SMALLMONEY_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F15_TEXT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F15_TEXT_DEF",
+                "nativeName" : "F15_TEXT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F16_TINYINT_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F16_TINYINT_DEF",
+                "nativeName" : "F16_TINYINT_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F17_VARCHAR_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F17_VARCHAR_DEF",
+                "nativeName" : "F17_VARCHAR_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F18_DATE_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F18_DATE_DEF",
+                "nativeName" : "F18_DATE_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F18_TIME_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F18_TIME_DEF",
+                "nativeName" : "F18_TIME_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F19_DATETIMEOFFSET_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F19_DATETIMEOFFSET_DEF",
+                "nativeName" : "F19_DATETIMEOFFSET_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "F20_DATETIME2_DEF",
+                "fieldType" : "CONNECTOR",
+                "label" : "F20_DATETIME2_DEF",
+                "nativeName" : "F20_DATETIME2_DEF",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "out_test.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-10 23:35:02 PDT"
+}
