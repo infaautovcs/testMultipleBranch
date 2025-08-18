@@ -1,0 +1,273 @@
+{
+  "name" : "BulkUnlink_LTF_DSS_FF_FF",
+  "maxLogs" : 10,
+  "sourceConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+  "sourceConnectionName" : "FF_PodCertification",
+  "targetConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+  "targetConnectionName" : "FF_PodCertification",
+  "sourceObjects" : [
+    {
+      "name" : "PC_LTF_FF_SRC.csv",
+      "label" : "PC_LTF_FF_SRC.csv",
+      "metadataUpdated" : false
+    }
+  ],
+  "targetObject" : "PC_LTF_FF_TGT.csv",
+  "targetObjectLabel" : "PC_LTF_FF_TGT.csv",
+  "operation" : "Insert",
+  "maxRows" : 0,
+  "truncateTarget" : false,
+  "bulkApiDBTarget" : false,
+  "verbose" : false,
+  "srcFlatFileAttrs" : {
+    "delimiter" : ",",
+    "textQualifier" : "\"",
+    "headerLineNo" : 1,
+    "firstDataRow" : 2,
+    "rowDelimiter" : 0,
+    "consecutiveDelimiter" : false,
+    "multiDelimitersAsAnd" : true,
+    "firstDataRowAsHeader" : false,
+    "headerAndDataDelimiter" : 0
+  },
+  "tgtFlatFileAttrs" : {
+    "delimiter" : ",",
+    "textQualifier" : "\"",
+    "headerLineNo" : 1,
+    "firstDataRow" : 2,
+    "rowDelimiter" : 0,
+    "consecutiveDelimiter" : false,
+    "multiDelimitersAsAnd" : true,
+    "firstDataRowAsHeader" : false,
+    "headerAndDataDelimiter" : 0
+  },
+  "targetMetadataUpdated" : false,
+  "queryAll" : false,
+  "srcSettings" : {
+    "showLabels" : false,
+    "naturalOrder" : true
+  },
+  "tgtSettings" : {
+    "showLabels" : false,
+    "naturalOrder" : true
+  },
+  "cfSettings" : {
+    "showLabels" : false,
+    "naturalOrder" : true
+  },
+  "bulkApi" : false,
+  "bulkApiSerialMode" : false,
+  "bulkApiMonitor" : false,
+  "isTargetObjectSfCustom" : false,
+  "fieldMaps" : [
+    {
+      "targetField" : {
+        "calculated" : false,
+        "columnIndex" : 0,
+        "createable" : false,
+        "externalId" : false,
+        "filterType" : "STRING",
+        "filterable" : true,
+        "key" : false,
+        "label" : "CATEGORYID",
+        "linkedFields" : [
+          "CATEGORYID"
+        ],
+        "name" : "CATEGORYID",
+        "naturalOrder" : 0,
+        "nullable" : true,
+        "parentObject" : "PC_LTF_FF_TGT.csv",
+        "pcType" : "UNISTRING",
+        "precision" : 255,
+        "scale" : 0,
+        "sfIdLookup" : false,
+        "showLabel" : false,
+        "type" : "nstring",
+        "unique" : false,
+        "uniqueName" : "CATEGORYID",
+        "updateable" : true,
+        "waterMarkKey" : false
+      },
+      "expression" : "CATEGORYID"
+    },
+    {
+      "targetField" : {
+        "calculated" : false,
+        "columnIndex" : 1,
+        "createable" : false,
+        "externalId" : false,
+        "filterType" : "STRING",
+        "filterable" : true,
+        "key" : false,
+        "label" : "CATEGORYNAME",
+        "linkedFields" : [
+          "CATEGORYNAME"
+        ],
+        "name" : "CATEGORYNAME",
+        "naturalOrder" : 0,
+        "nullable" : true,
+        "parentObject" : "PC_LTF_FF_TGT.csv",
+        "pcType" : "UNISTRING",
+        "precision" : 255,
+        "scale" : 0,
+        "sfIdLookup" : false,
+        "showLabel" : false,
+        "type" : "nstring",
+        "unique" : false,
+        "uniqueName" : "CATEGORYNAME",
+        "updateable" : true,
+        "waterMarkKey" : false
+      },
+      "expression" : "CATEGORYNAME"
+    },
+    {
+      "targetField" : {
+        "calculated" : false,
+        "columnIndex" : 2,
+        "createable" : false,
+        "externalId" : false,
+        "filterType" : "STRING",
+        "filterable" : true,
+        "key" : false,
+        "label" : "DESCRIPTION",
+        "linkedFields" : [
+          "DESCRIPTION"
+        ],
+        "name" : "DESCRIPTION",
+        "naturalOrder" : 0,
+        "nullable" : true,
+        "parentObject" : "PC_LTF_FF_TGT.csv",
+        "pcType" : "UNISTRING",
+        "precision" : 255,
+        "scale" : 0,
+        "sfIdLookup" : false,
+        "showLabel" : false,
+        "type" : "nstring",
+        "unique" : false,
+        "uniqueName" : "DESCRIPTION",
+        "updateable" : true,
+        "waterMarkKey" : false
+      },
+      "expression" : "DESCRIPTION"
+    },
+    {
+      "targetField" : {
+        "calculated" : false,
+        "columnIndex" : 3,
+        "createable" : false,
+        "externalId" : false,
+        "filterType" : "STRING",
+        "filterable" : true,
+        "key" : false,
+        "label" : "CurrentlyProcessedFileName",
+        "name" : "CurrentlyProcessedFileName",
+        "naturalOrder" : 0,
+        "nullable" : true,
+        "parentObject" : "PC_LTF_FF_TGT.csv",
+        "pcType" : "UNISTRING",
+        "precision" : 255,
+        "scale" : 0,
+        "sfIdLookup" : false,
+        "showLabel" : false,
+        "type" : "nstring",
+        "unique" : false,
+        "uniqueName" : "CurrentlyProcessedFileName",
+        "updateable" : true,
+        "waterMarkKey" : false
+      }
+    }
+  ],
+  "sourceFields" : [
+    {
+      "calculated" : false,
+      "columnIndex" : 0,
+      "createable" : false,
+      "externalId" : false,
+      "filterType" : "STRING",
+      "filterable" : true,
+      "key" : false,
+      "label" : "CATEGORYID",
+      "linkedFields" : [
+        "CATEGORYID"
+      ],
+      "name" : "CATEGORYID",
+      "naturalOrder" : 0,
+      "nullable" : true,
+      "parentObject" : "PC_LTF_FF_SRC.csv",
+      "pcType" : "UNISTRING",
+      "precision" : 255,
+      "scale" : 0,
+      "sfIdLookup" : false,
+      "showLabel" : false,
+      "type" : "nstring",
+      "unique" : false,
+      "uniqueName" : "CATEGORYID",
+      "updateable" : true,
+      "waterMarkKey" : false
+    },
+    {
+      "calculated" : false,
+      "columnIndex" : 1,
+      "createable" : false,
+      "externalId" : false,
+      "filterType" : "STRING",
+      "filterable" : true,
+      "key" : false,
+      "label" : "CATEGORYNAME",
+      "linkedFields" : [
+        "CATEGORYNAME"
+      ],
+      "name" : "CATEGORYNAME",
+      "naturalOrder" : 0,
+      "nullable" : true,
+      "parentObject" : "PC_LTF_FF_SRC.csv",
+      "pcType" : "UNISTRING",
+      "precision" : 255,
+      "scale" : 0,
+      "sfIdLookup" : false,
+      "showLabel" : false,
+      "type" : "nstring",
+      "unique" : false,
+      "uniqueName" : "CATEGORYNAME",
+      "updateable" : true,
+      "waterMarkKey" : false
+    },
+    {
+      "calculated" : false,
+      "columnIndex" : 2,
+      "createable" : false,
+      "externalId" : false,
+      "filterType" : "STRING",
+      "filterable" : true,
+      "key" : false,
+      "label" : "DESCRIPTION",
+      "linkedFields" : [
+        "DESCRIPTION"
+      ],
+      "name" : "DESCRIPTION",
+      "naturalOrder" : 0,
+      "nullable" : true,
+      "parentObject" : "PC_LTF_FF_SRC.csv",
+      "pcType" : "UNISTRING",
+      "precision" : 255,
+      "scale" : 0,
+      "sfIdLookup" : false,
+      "showLabel" : false,
+      "type" : "nstring",
+      "unique" : false,
+      "uniqueName" : "DESCRIPTION",
+      "updateable" : true,
+      "waterMarkKey" : false
+    }
+  ],
+  "allowNullUpdates" : false,
+  "targetBatchSize" : 200,
+  "assignmentRuleId" : "-1",
+  "assignmentRuleType" : "None",
+  "createSuccessFile" : false,
+  "bulkApiHardDelete" : false,
+  "srcRuntimeAttrs" : { },
+  "tgtRuntimeAttrs" : { },
+  "parameterFileEncoding" : "UTF-8",
+  "vcsExportTime" : "2025-08-18 10:26:07 PDT"
+}
