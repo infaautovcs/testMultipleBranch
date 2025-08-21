@@ -1,0 +1,49 @@
+{
+  "name" : "BulkUnlink_Multi_Asset_DRS",
+  "description" : "This is DRS for Pod Certification",
+  "errorTaskEmail" : {
+    "emails" : "emailqaverify1@gmail.com",
+    "emailType" : "ERROR"
+  },
+  "successTaskEmail" : {
+    "emails" : "emailqaverify1@gmail.com",
+    "emailType" : "SUCCESS"
+  },
+  "warningTaskEmail" : {
+    "emails" : "emailqaverify1@gmail.com",
+    "emailType" : "WARNING"
+  },
+  "maxLogs" : 10,
+  "sourceConnectionId" : "@61y87GQOjD7hs4tNFBBX2C",
+  "sourceConnectionName" : "SQL_Server_PodCertification",
+  "targetConnectionId" : "@el93TPotUIkfjU2TWcLbca",
+  "targetConnectionName" : "FF_PodCertification",
+  "tablePrefix" : "PC_DRS3222_",
+  "verbose" : false,
+  "fullRefresh" : true,
+  "replicateAllObjects" : false,
+  "removeDeleted" : true,
+  "queryAll" : false,
+  "srcShowLabels" : false,
+  "maxRows" : 0,
+  "stopOnError" : true,
+  "replicationObjects" : [
+    "PC_DRS_ALL_DT_SQL2008"
+  ],
+  "metadataMode" : 0,
+  "bulkApi" : false,
+  "base64BodySize" : 0.0,
+  "bulkApiDBTarget" : false,
+  "filters" : [
+    {
+      "objectName" : "PC_DRS_ALL_DT_SQL2008",
+      "field" : "F4_CHAR_DEF",
+      "fieldLabel" : "F4_CHAR_DEF",
+      "type" : "STRING",
+      "operator" : "equals",
+      "value" : "TEST1"
+    }
+  ],
+  "srcRuntimeAttrs" : { },
+  "vcsExportTime" : "2025-08-21 01:04:54 PDT"
+}
