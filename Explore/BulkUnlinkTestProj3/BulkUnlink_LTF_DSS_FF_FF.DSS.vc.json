@@ -1,9 +1,9 @@
 {
   "name" : "BulkUnlink_LTF_DSS_FF_FF",
   "maxLogs" : 10,
-  "sourceConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+  "sourceConnectionId" : "@el93TPotUIkfjU2TWcLbca",
   "sourceConnectionName" : "FF_PodCertification",
-  "targetConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+  "targetConnectionId" : "@el93TPotUIkfjU2TWcLbca",
   "targetConnectionName" : "FF_PodCertification",
   "sourceObjects" : [
     {
@@ -269,5 +269,5 @@
   "srcRuntimeAttrs" : { },
   "tgtRuntimeAttrs" : { },
   "parameterFileEncoding" : "UTF-8",
-  "vcsExportTime" : "2025-08-18 10:26:07 PDT"
+  "vcsExportTime" : "2025-08-21 00:46:37 PDT"
 }

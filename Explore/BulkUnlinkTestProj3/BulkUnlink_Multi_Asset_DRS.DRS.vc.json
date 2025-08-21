@@ -14,9 +14,9 @@
     "emailType" : "WARNING"
   },
   "maxLogs" : 10,
-  "sourceConnectionId" : "@6CIwHptxoEhk21SdXr9hqI",
+  "sourceConnectionId" : "@61y87GQOjD7hs4tNFBBX2C",
   "sourceConnectionName" : "SQL_Server_PodCertification",
-  "targetConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+  "targetConnectionId" : "@el93TPotUIkfjU2TWcLbca",
   "targetConnectionName" : "FF_PodCertification",
   "tablePrefix" : "PC_DRS3222_",
   "verbose" : false,
@@ -45,5 +45,5 @@
     }
   ],
   "srcRuntimeAttrs" : { },
-  "vcsExportTime" : "2025-08-18 10:26:07 PDT"
+  "vcsExportTime" : "2025-08-21 00:46:36 PDT"
 }

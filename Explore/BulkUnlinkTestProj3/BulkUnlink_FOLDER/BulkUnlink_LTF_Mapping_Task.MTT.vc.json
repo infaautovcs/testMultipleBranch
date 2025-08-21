@@ -1,6 +1,6 @@
 {
   "name" : "BulkUnlink_LTF_Mapping_Task",
-  "runtimeEnvironmentId" : "@4E1trnufYjih4g0VlPxYCV",
+  "runtimeEnvironmentId" : "@59cp7kyi6VjeRu5QaRuk2V",
   "runtimeEnvironmentName" : "TMS47W1264001",
   "maxLogs" : 10,
   "parameters" : [
@@ -17,7 +17,7 @@
         "visible" : "false",
         "originalPath" : "Source"
       },
-      "sourceConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+      "sourceConnectionId" : "@el93TPotUIkfjU2TWcLbca",
       "connectionName" : "FF_PodCertification",
       "newFlatFile" : false,
       "newObject" : false,
@@ -82,7 +82,7 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "Target"
       },
-      "targetConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+      "targetConnectionId" : "@el93TPotUIkfjU2TWcLbca",
       "connectionName" : "FF_PodCertification",
       "targetObject" : "PC_LTF_FF_TGT.csv",
       "targetObjectLabel" : "PC_LTF_FF_TGT.csv",
@@ -128,7 +128,7 @@
     }
   ],
   "verbose" : false,
-  "mappingId" : "@iJFtCRZGz6bhPipvAoIaEM",
+  "mappingId" : "@9kalw4uALeXeJbFUNCzmAo",
   "mappingTemplateName" : "BulkUnlink_LTF_Mapping",
   "hidden" : false,
   "enableCrossSchemaPushdown" : true,
@@ -141,5 +141,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-08-18 10:26:08 PDT"
+  "vcsExportTime" : "2025-08-21 00:46:38 PDT"
 }
