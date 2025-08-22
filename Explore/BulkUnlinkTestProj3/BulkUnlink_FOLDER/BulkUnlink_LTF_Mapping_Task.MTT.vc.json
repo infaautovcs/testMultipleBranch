@@ -1,6 +1,6 @@
 {
   "name" : "BulkUnlink_LTF_Mapping_Task",
-  "runtimeEnvironmentId" : "@59cp7kyi6VjeRu5QaRuk2V",
+  "runtimeEnvironmentId" : "@2x6F5sHEGjNkF2GL5V9dcg",
   "runtimeEnvironmentName" : "TMS47W1264001",
   "maxLogs" : 10,
   "parameters" : [
@@ -17,7 +17,7 @@
         "visible" : "false",
         "originalPath" : "Source"
       },
-      "sourceConnectionId" : "@el93TPotUIkfjU2TWcLbca",
+      "sourceConnectionId" : "@eSuUI2mgl4XebciWcv2RaF",
       "connectionName" : "FF_PodCertification",
       "newFlatFile" : false,
       "newObject" : false,
@@ -67,9 +67,9 @@
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
+      "restmodernSource" : true,
       "unspecified" : false,
-      "fileList" : false,
-      "restmodernSource" : true
+      "fileList" : false
     },
     {
       "name" : "$Target$",
@@ -82,7 +82,7 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "Target"
       },
-      "targetConnectionId" : "@el93TPotUIkfjU2TWcLbca",
+      "targetConnectionId" : "@eSuUI2mgl4XebciWcv2RaF",
       "connectionName" : "FF_PodCertification",
       "targetObject" : "PC_LTF_FF_TGT.csv",
       "targetObjectLabel" : "PC_LTF_FF_TGT.csv",
@@ -122,13 +122,13 @@
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
       },
+      "restmodernSource" : true,
       "unspecified" : false,
-      "fileList" : false,
-      "restmodernSource" : true
+      "fileList" : false
     }
   ],
   "verbose" : false,
-  "mappingId" : "@9kalw4uALeXeJbFUNCzmAo",
+  "mappingId" : "@i5KYx3K4oYOlg24wxcdlwv",
   "mappingTemplateName" : "BulkUnlink_LTF_Mapping",
   "hidden" : false,
   "enableCrossSchemaPushdown" : true,
@@ -141,5 +141,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-08-21 00:47:22 PDT"
+  "vcsExportTime" : "2025-08-22 01:01:55 PDT"
 }

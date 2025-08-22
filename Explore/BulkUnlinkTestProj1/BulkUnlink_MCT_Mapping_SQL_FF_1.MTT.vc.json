@@ -1,7 +1,7 @@
 {
   "name" : "BulkUnlink_MCT_Mapping_SQL_FF_1",
   "description" : "Uses PC_Mapping_SQL_FF_1\r\n",
-  "runtimeEnvironmentId" : "@4E1trnufYjih4g0VlPxYCV",
+  "runtimeEnvironmentId" : "@2x6F5sHEGjNkF2GL5V9dcg",
   "runtimeEnvironmentName" : "TMS47W1264001",
   "maxLogs" : 10,
   "parameters" : [
@@ -19,7 +19,7 @@
         "flags" : "SUPPORTS_MULTI_SCHEMA",
         "originalPath" : "Source"
       },
-      "sourceConnectionId" : "@6CIwHptxoEhk21SdXr9hqI",
+      "sourceConnectionId" : "@2Jq4whxj9Vaf93tbODFlAB",
       "connectionName" : "SQL_Server_PodCertification",
       "newFlatFile" : false,
       "newObject" : false,
@@ -73,7 +73,7 @@
         "supportApplyDDLChanges" : "true",
         "originalPath" : "Target"
       },
-      "targetConnectionId" : "@dlzmbT7VIWQkYQucJJQPIE",
+      "targetConnectionId" : "@eSuUI2mgl4XebciWcv2RaF",
       "connectionName" : "FF_PodCertification",
       "targetObject" : "PC_Map_MCT_tgt_1.csv",
       "targetObjectLabel" : "PC_Map_MCT_tgt_1.csv",
@@ -120,7 +120,7 @@
     }
   ],
   "verbose" : false,
-  "mappingId" : "@7wHbjCVHx9AcnNrvLHJvSG",
+  "mappingId" : "@69RkCIB3Y6dcdEWm1ZpBUt",
   "mappingTemplateName" : "BulkUnlink_Mapping_SQL_FF_1",
   "hidden" : false,
   "enableCrossSchemaPushdown" : true,
@@ -133,5 +133,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-08-18 10:39:49 PDT"
+  "vcsExportTime" : "2025-08-22 01:01:54 PDT"
 }

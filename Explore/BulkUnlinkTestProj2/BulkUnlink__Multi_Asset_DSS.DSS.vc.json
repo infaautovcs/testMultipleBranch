@@ -1,9 +1,9 @@
 {
   "name" : "BulkUnlink__Multi_Asset_DSS",
   "maxLogs" : 10,
-  "sourceConnectionId" : "@61y87GQOjD7hs4tNFBBX2C",
+  "sourceConnectionId" : "@2Jq4whxj9Vaf93tbODFlAB",
   "sourceConnectionName" : "SQL_Server_PodCertification",
-  "targetConnectionId" : "@el93TPotUIkfjU2TWcLbca",
+  "targetConnectionId" : "@eSuUI2mgl4XebciWcv2RaF",
   "targetConnectionName" : "FF_PodCertification",
   "sourceObjects" : [
     {
@@ -1713,5 +1713,5 @@
   "srcRuntimeAttrs" : { },
   "tgtRuntimeAttrs" : { },
   "parameterFileEncoding" : "UTF-8",
-  "vcsExportTime" : "2025-08-21 00:32:47 PDT"
+  "vcsExportTime" : "2025-08-22 01:01:50 PDT"
 }
