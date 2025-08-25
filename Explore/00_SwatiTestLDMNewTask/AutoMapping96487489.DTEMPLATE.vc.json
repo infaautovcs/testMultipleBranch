@@ -1,0 +1,191 @@
+{
+  "content" : {
+    "description" : "Extracts all or a subset of data from a source and loads it to a dynamically created target.\n\nIf you create a relational target, the Mapping task inserts data into the target table the first time it runs. Subsequent runs can load data using update or upsert operations. If you create a flat file target, the Mapping task re-creates the target file each time it runs.",
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "AutoMapping96487489",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "src -> exp_add"
+      },
+      {
+        "link" : "exp_add -> tgt"
+      }
+    ],
+    "parameters" : [
+      {
+        "description" : "Select any available source connection or create a new connection connection.",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Source",
+        "name" : "p_src_conn"
+      },
+      {
+        "description" : "Select the source object read data from.",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Source",
+        "name" : "p_src_object"
+      },
+      {
+        "description" : "Select the target connection or create a new connection.\n\nThe target connection can be the same or different from the source connection.",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Target",
+        "name" : "p_tgt_conn"
+      },
+      {
+        "description" : "Select the object that you want to load data to. Click Create Target to create the target object the first time the Mapping task runs.\n\nIf the target is a relational target, the Mapping task inserts data into the target table the first time it runs. For subsequent runs, you have the following options:\n\n1. Keep previously loaded data in the target (default).  Disable the Truncate Table option, and select one of the following operations:\na. To append data to the target, select Insert.  \nb. To update existing records and insert new records, select Upsert and configure the update columns.\nc. To update existing records and discard new records, select Update and configure the update columns.\n\n2. Fully reload the target. Select the Insert operation and enable the Truncate Table option.\n\n3. Delete existing records from the target. To delete existing records from the target that have the same primary key as the source, select the Delete operation, disable the Truncate Table option, and configure the update columns.\n\nIf the target is a file target, the Mapping task re-creates the file each time it runs.",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Target",
+        "name" : "p_tgt_object"
+      },
+      {
+        "description" : "Optionally, create expressions that add fields to the target. For example, you might want to add a system timestamp field to each replicated record in the target. \n\nUse the built-in functions to create one or more expressions.\n\nIf you do not want to add additional fields, do not enter expressions here.",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Optional Expression Fields",
+        "name" : "p_exp_fields"
+      }
+    ],
+    "transformations" : [
+      {
+        "description" : "Selects all data from a source. Optionally filtering conditions can be added on the source.\n\nTo run this mapping, you must set the following parameters:\n• p_scr_conn - represents the source connection\n• p_src_object - represents the source object",
+        "name" : "src",
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "p_src_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "p_src_object"
+          },
+          "objectType" : "PARAMETERIZED",
+          "useDynamicFileName" : "false",
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "description" : "Adds optional expression fields to the target during Mapping task creation. For example, when creating a Mapping task you might want to add a system timestamp field to each replicated record in the target. If you do not want to add additional fields, this transformation acts as a pass-through transformation.\n\nTo add expression fields to the target during Mapping task creation, set the following parameter:\n• p_exp_fields - represents optional expressions that create additional target fields",
+        "name" : "exp_add",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "additionalFields$" : {
+          "name" : "p_exp_fields"
+        },
+        "windowConfigurationEnabled" : "false"
+      },
+      {
+        "description" : "Creates the target and loads data to it. \n\nTo run this mapping, you must set the following parameters:\n• p_tgt_conn - represents the target connection\n• p_tgt_object - represents the target object\n\nIf the target is a relational target, the Mapping task inserts data into the target table the first time it runs. For subsequent runs, you have the following options:\n\n1. Keep previously loaded data in the target (default).  Disable the Truncate Table option, and select one of the following operations:\na. To append data to the target, select Insert.  \nb. To update existing records and insert new records, select Upsert and configure the update columns.\nc. To update existing records and discard new records, select Update and configure the update columns.\n\n2. Fully reload the target. Select the Insert operation and enable the Truncate Table option.\n\n3. Delete existing records from the target. To delete existing records from the target that have the same primary key as the source, select the Delete operation, disable the Truncate Table option, and configure the update columns.\n\nIf the target is a file target, the Mapping task re-creates the file each time it runs.",
+        "name" : "tgt",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          },
+          {
+            "name" : "requestXmlSize",
+            "value" : "1024"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "p_tgt_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "p_tgt_object"
+          },
+          "objectType" : "PARAMETERIZED",
+          "useDynamicFileName" : "false",
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-25 14:36:04 GMT"
+}

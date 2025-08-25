@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "kXcwZjzqLM0bFj3lox4YIK",
+    "name" : "DataServiceAPIServiceConnector",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "2G7QnG5YLnzYLnz-gt-64435-2025-06-25T06:34:53.863Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Service Connector for Job REST API",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.719Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

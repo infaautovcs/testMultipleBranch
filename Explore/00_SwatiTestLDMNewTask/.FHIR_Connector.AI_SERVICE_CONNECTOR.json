@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "fnJ7c8bSX8MkltV14JCKES",
+    "name" : "FHIR_Connector",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jlTonQYWeIssjql-gt-150400-2025-07-07T06:16:05.148Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Bi-directional service connector that can be used to retrieve or send data to the FHIR server",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.753Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

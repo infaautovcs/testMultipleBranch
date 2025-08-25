@@ -1,0 +1,93 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>Fdppppppppppppp-gt-49875-2024-05-21T09:06:05.005Z::po.xml</types1:EntryId>
+      <types1:Name>payloadObject-5</types1:Name>
+      <types1:ParentFlowIds>IJ1reK8ZAZf5kck-gt-49885-2024-05-21T09:06:05.619Z::pd.xml,oDdvrTdtqSLlBWl-gt-144298-2025-07-07T06:16:06.234Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description>Process object for the getting the objects from the input payload</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>platformqa</types1:CreatedBy>
+      <types1:CreationDate>2024-05-21T09:06:05Z</types1:CreationDate>
+      <types1:ModifiedBy>platformqa</types1:ModifiedBy>
+      <types1:ModificationDate>2025-07-07T06:16:06Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="payloadObject"
+                        isByCopy="true"
+                        name="payloadObject-5">
+            <description>Process object for the getting the objects from the input payload </description>
+            <tags/>
+            <detail>
+               <field label="Agent_Group_ID"
+                      name="Agent_Group_ID"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="Additional_Outputs"
+                      name="Additional_Outputs"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:$any</option>
+                  </options>
+               </field>
+               <field label="Input"
+                      name="Input"
+                      nullable="true"
+                      required="false"
+                      type="reference">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-5</option>
+                     <option name="guid">4tnCLK6jPW9gETaZSIV6Ma</option>
+                  </options>
+               </field>
+               <field label="Output"
+                      name="Output"
+                      nullable="true"
+                      required="false"
+                      type="reference">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-5</option>
+                     <option name="guid">4tnCLK6jPW9gETaZSIV6Ma</option>
+                  </options>
+               </field>
+               <field label="Additional_Inputs"
+                      name="Additional_Inputs"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-5</option>
+                     <option name="guid">4tnCLK6jPW9gETaZSIV6Ma</option>
+                  </options>
+               </field>
+               <field label="Service_Parameters"
+                      name="Service_Parameters"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-5</option>
+                     <option name="guid">4tnCLK6jPW9gETaZSIV6Ma</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>aIZ2d1AzY7seSQoY4dvOqS</types1:GUID>
+      <types1:DisplayName>payloadObject</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-25T14:36:19.423Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

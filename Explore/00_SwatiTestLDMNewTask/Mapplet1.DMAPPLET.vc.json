@@ -1,0 +1,65 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "documentType" : "DMAPPLET",
+    "name" : "Mapplet1",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Input -> Output"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2024-01-17T01:46:45.562Z",
+        "name" : "Input",
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "fields" : [
+          {
+            "name" : "NewField",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ]
+      },
+      {
+        "createTime" : "2024-01-17T01:46:45.562Z",
+        "name" : "Output",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "fieldMappingMode" : "BY_NAME",
+        "fields" : [
+          {
+            "name" : "NewField",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 10,
+            "scale" : 0
+          }
+        ]
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-25 14:36:12 GMT"
+}

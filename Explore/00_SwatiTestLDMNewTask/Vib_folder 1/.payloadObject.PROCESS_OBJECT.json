@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "5SGxN27FmaghxM8QrTDwYb",
+    "name" : "payloadObject",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "i5rdsMkdypKwKBq-gt-64895-2025-06-25T06:34:55.138Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Process object for the getting the objects from the input payload",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.740Z",
+  "objectRefs" : [ {
+    "id" : "99cotZAtxeohS8QSLtGqEx",
+    "name" : "ports",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "lTonQYWeIssjqlu-gt-64451-2025-06-25T06:34:54.193Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Process object for input attributes in the payload objects.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask/Vib_folder 1"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

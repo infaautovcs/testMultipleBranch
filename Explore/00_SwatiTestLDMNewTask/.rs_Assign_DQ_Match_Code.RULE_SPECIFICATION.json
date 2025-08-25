@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "42j3JhbrSczexguWIH2fsI",
+    "name" : "rs_Assign_DQ_Match_Code",
+    "type" : "RULE_SPECIFICATION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "42j3JhbrSczexguWIH2fsI"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2025-08-25T14:36:20.776Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

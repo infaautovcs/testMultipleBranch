@@ -1,0 +1,87 @@
+{
+  "objectInfo" : {
+    "id" : "5g3Yl9w70IocLYZ3WWE1QN",
+    "name" : "HL7_ADTA04_to_FHIR_R4",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "TOfTRgpDqotxGom-gt-64470-2025-06-25T06:34:55.739Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Converts HL7 ADT A04 messages to FHIR. This involves translating patient registration information from the HL7 v2 format into the FHIR standard. Key steps include parsing the HL7 message, and mapping segments, such as, MSH (Message Header), PID (Patient Identification), and PV1 (Patient Visit) to the corresponding FHIR resources, such as MessageHeader, Patient, and Encounter. These resources are then bundled into an FHIR bundle for validation and transmission, facilitating improved interoperability and modern data exchange in healthcare.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.769Z",
+  "objectRefs" : [ {
+    "id" : "6K3PaOSqhQOjJEsfe3orm0",
+    "name" : "AppConnectionforFHIR",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "EAVR3aaa-gt-64885-2025-06-25T06:34:54.94Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Defines actions that you can perform using a pre-defined FHIR service connector",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask/Vib_folder 1"
+  }, {
+    "id" : "5SGxN27FmaghxM8QrTDwYb",
+    "name" : "payloadObject",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "i5rdsMkdypKwKBq-gt-64895-2025-06-25T06:34:55.138Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Process object for the getting the objects from the input payload",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask/Vib_folder 1"
+  }, {
+    "id" : "1rXdhS62f46ifGNNr8qb4F",
+    "name" : "ConnectionForDataServiceAPIServiceConnector",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "HH0thJ6gaabclvA-gt-64905-2025-06-25T06:34:55.34Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Defines actions that you can perform using DataServiceAPI_Service_Connector ",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask/Vib_folder 1"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

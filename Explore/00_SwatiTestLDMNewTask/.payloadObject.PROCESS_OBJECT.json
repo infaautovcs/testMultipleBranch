@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "aIZ2d1AzY7seSQoY4dvOqS",
+    "name" : "payloadObject",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Fdppppppppppppp-gt-49875-2024-05-21T09:06:05.005Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Process object for the getting the objects from the input payload",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.781Z",
+  "objectRefs" : [ {
+    "id" : "4tnCLK6jPW9gETaZSIV6Ma",
+    "name" : "ports",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "wZlNaaabdvhxiQL-gt-49829-2024-05-21T09:06:03.583Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Process object for input attributes in the payload objects.",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

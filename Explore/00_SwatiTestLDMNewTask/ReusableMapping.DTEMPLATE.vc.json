@@ -1,0 +1,291 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "name" : "ReusableMapping",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Expression -> Target"
+      },
+      {
+        "link" : "Source -> Expression"
+      }
+    ],
+    "parameters" : [
+      {
+        "description" : "Select your source connection",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Source",
+        "name" : "p_src_conn"
+      },
+      {
+        "description" : "Select your source object",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Source",
+        "name" : "p_src_object",
+        "defaultValue" : {
+          "valueLiteral" : "date_hour_2014.csv"
+        }
+      },
+      {
+        "description" : "Select your target connection",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Target",
+        "name" : "p_tgt_connection"
+      },
+      {
+        "description" : "Select your target object",
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "Target",
+        "name" : "p_tgt_object"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2020-05-14T21:58:01.147Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "p_src_conn"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "p_src_object"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2020-05-14T21:58:01.148Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              },
+              {
+                "bulkRename" : "false",
+                "include" : "false",
+                "names" : [
+                  {
+                    "inputName" : "CALENDAR_DATE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId$" : {
+            "name" : "p_tgt_connection"
+          },
+          "excludeDynamicFileNameField" : "false",
+          "object$" : {
+            "name" : "p_tgt_object"
+          },
+          "objectType" : "PARAMETERIZED",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2020-05-14T21:58:29.973Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "v_calendar_date",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "VARIABLE",
+            "expression" : "TO_DATE(CALENDAR_DATE, 'YYYY/MM/DD HH24:MI:SS')"
+          },
+          {
+            "name" : "out_CALENDAR_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "v_calendar_date"
+          },
+          {
+            "name" : "YEAR_NUMBER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "GET_DATE_PART(v_calendar_date, 'YYYY')"
+          },
+          {
+            "name" : "MONTH_NUMBER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "GET_DATE_PART(v_calendar_date, 'MM')"
+          },
+          {
+            "name" : "DAY_NUMBER",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "GET_DATE_PART(v_calendar_date, 'DD')"
+          },
+          {
+            "name" : "WEEK_DAY_NAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 30,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : "TO_CHAR(v_calendar_date, 'Day')"
+          },
+          {
+            "name" : "LOAD_DATE",
+            "platformType" : {
+              "name" : "date/time"
+            },
+            "precision" : 29,
+            "scale" : 9,
+            "expFieldType" : "OUTPUT",
+            "expression" : "Systimestamp()"
+          }
+        ]
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-25 14:36:16 GMT"
+}

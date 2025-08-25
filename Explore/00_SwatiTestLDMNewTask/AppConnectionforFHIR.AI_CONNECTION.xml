@@ -1,0 +1,45 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>RjxcghuImXycotF-gt-144278-2025-07-07T06:16:05.701Z::conn.xml</types1:EntryId>
+      <types1:Name>AppConnectionforFHIR-7</types1:Name>
+      <types1:ParentFlowIds>oDdvrTdtqSLlBWl-gt-144298-2025-07-07T06:16:06.234Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>Defines actions that you can perform using a pre-defined FHIR service connector</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:tavubugwdev8.informatica.com_old</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>platformqa</types1:CreatedBy>
+      <types1:CreationDate>2025-07-07T06:16:06Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="AppConnectionforFHIR"
+                     label="AppConnectionforFHIR"
+                     name="AppConnectionforFHIR-7">
+            <description>Defines actions that you can perform using a pre-defined FHIR service connector</description>
+            <tags>.agent:tavubugwdev8.informatica.com_old</tags>
+            <agent>tavubugwdev8.informatica.com_old</agent>
+            <attributes>
+               <attribute encrypted="false" name="Host" value="invvector01.informatica.com"/>
+               <attribute encrypted="false" name="Port" value="5555"/>
+            </attributes>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/FHIR_Connector_2/FHIR_Connector_2_svcDef.xml"
+                               guid="fnJ7c8bSX8MkltV14JCKES"
+                               name="FHIR_Connector-7"
+                               supportsConnectionTest="false"
+                               uuid="d680efa4-4646-4de2-b0ec-2c511bb5afc5">
+               <description>Bi-directional service connector that can be used to retrieve or send data to the FHIR server</description>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>5gaxNhJjY8ij5KrZgemj4G</types1:GUID>
+      <types1:DisplayName>AppConnectionforFHIR</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-25T14:36:19.388Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

@@ -1,0 +1,710 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>dtclq1iUsRvsGRv-gt-64443-2025-06-25T06:34:54.056Z::svc.xml</types1:EntryId>
+      <types1:Name>FHIR_Connector-6</types1:Name>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description>Bi-directional service connector that can be used to retrieve or send data to the FHIR server</types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>platformqa</types1:CreatedBy>
+      <types1:CreationDate>2025-06-25T06:34:54Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="FHIR_Connector"
+                            label=""
+                            name="FHIR_Connector-6"
+                            uuid="d680efa4-4646-4de2-b0ec-2c511bb5afc5">
+            <description>Bi-directional service connector that can be used to retrieve or send data to the FHIR server</description>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Host name of the FHIR server"
+                                    label="Host"
+                                    masked="false"
+                                    name="Host"
+                                    required="true"
+                                    testWith="invvector01.informatica.com"
+                                    type="string"/>
+               <connectionAttribute description="Port number of the FHIR server"
+                                    label="Port"
+                                    masked="false"
+                                    name="Port"
+                                    required="true"
+                                    testWith="5555"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="PATCH_FHIR"
+                       maxRedirects="100"
+                       name="PATCH_FHIR"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Patches a resource based on the resource type and ID.</description>
+                  <input>
+                     <parameter description="Request Body"
+                                label="Any"
+                                name="Any"
+                                required="true"
+                                testWith=""
+                                type="reference">
+                        <options>
+                           <option name="referenceTo">$any</option>
+                        </options>
+                     </parameter>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Resource ID"
+                                label="ID"
+                                name="ID"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="http://{ $Host }:{ $Port }/fhir/{ $Type }/{ $ID }" verb="PATCH">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json; charset=UTF-8</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="UnwrappedJSON"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_FHIR"
+                       maxRedirects="100"
+                       name="GET_FHIR"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Reads a resource based on the resource type and ID.</description>
+                  <input>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith="Patient"
+                                type="string"/>
+                     <parameter description=""
+                                label="ID"
+                                name="ID"
+                                nogen="true"
+                                required="true"
+                                testWith="3c3da3c3-8fcc-4edd-a959-a0eb2a9b197c"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="http://{ $Host }:{ $Port }/fhir/{ $Type }/{ $ID }" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/xml</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="DELETE_FHIR"
+                       maxRedirects="100"
+                       name="DELETE_FHIR"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Deletes a resource based on the resource type and ID.</description>
+                  <input>
+                     <parameter description="Resource type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Resource ID"
+                                label="ID"
+                                name="ID"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/{ $Type }/{ $ID }" verb="DELETE">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="PUT_FHIR"
+                       maxRedirects="100"
+                       name="PUT_FHIR"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Updates a resource based on the resource type and ID.</description>
+                  <input>
+                     <parameter description=""
+                                label="Any"
+                                name="Any"
+                                required="true"
+                                testWith=""
+                                type="reference">
+                        <options>
+                           <option name="referenceTo">$any</option>
+                        </options>
+                     </parameter>
+                     <parameter description="Resource type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Resource ID"
+                                label="ID"
+                                name="ID"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/{ $Type }/{ $ID }" verb="PUT">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json; charset=UTF-8</header>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                        <body generateUsing="UnwrappedJSON"/>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_FHIR_History"
+                       maxRedirects="100"
+                       name="GET_FHIR_History"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Reads a resource based on the resource type, ID, history, and version.</description>
+                  <input>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Resource ID"
+                                label="ID"
+                                name="ID"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description="Resource  version ID"
+                                label="Version_ID"
+                                name="Version_ID"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/{ $Type }/{ $ID }/_history/{ $Version_ID }"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="POST_FHIR_Type"
+                       maxRedirects="100"
+                       name="POST_FHIR_Type"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Creates a resource of a particular resource type.</description>
+                  <input>
+                     <parameter description="Request Body"
+                                label="Body"
+                                name="Body"
+                                nogen="true"
+                                required="true"
+                                testWith="&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;Patient xmlns=&#34;http://hl7.org/fhir&#34;&gt;&lt;id value=&#34;1120&#34;/&gt;&lt;text&gt;&lt;status value=&#34;generated&#34;/&gt;&lt;div xmlns=&#34;http://www.w3.org/1999/xhtml&#34;&gt;&lt;p style=&#34;border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;&#34;&gt;&lt;b&gt; Jim &lt;/b&gt;  male, DoB: 1974-12-29 ( Medical record number: 12345 (use: USUAL, period: 2001-05-06--&amp;gt;(ongoing)))&lt;/p&gt;&lt;hr/&gt;&lt;table class=&#34;grid&#34;&gt;&lt;tr&gt;&lt;td style=&#34;background-color: #f3f5da&#34; title=&#34;Record is active&#34;&gt;Active:&lt;/td&gt;&lt;td&gt; true&lt;/td&gt;&lt;td style=&#34;background-color: #f3f5da&#34; title=&#34;Known status of Patient&#34;&gt;Deceased:&lt;/td&gt;&lt;td colspan=&#34;3&#34;&gt;false&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;background-color: #f3f5da&#34; title=&#34;Alternate names (see the one above)&#34;&gt;Alt Names:&lt;/td&gt;&lt;td colspan=&#34;3&#34;&gt;&lt;ul&gt;&lt;li&gt; Peter James Chalmers (OFFICIAL)&lt;/li&gt;&lt;li&gt; Vikash (MAIDEN)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;background-color: #f3f5da&#34; title=&#34;Ways to contact the Patient&#34;&gt;Contact Details:&lt;/td&gt;&lt;td colspan=&#34;3&#34;&gt;&lt;ul&gt;&lt;li&gt; -unknown-(HOME)&lt;/li&gt;&lt;li&gt; ph: (03) 5555 6473(WORK)&lt;/li&gt;&lt;li&gt; ph: (03) 3410 5613(MOBILE)&lt;/li&gt;&lt;li&gt; ph: (03) 5555 8834(OLD)&lt;/li&gt;&lt;li&gt; 534 Erewhon St PeasantVille, Rainbow, Vic  3999(HOME)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;background-color: #f3f5da&#34; title=&#34;Nominated Contact: Next-of-Kin&#34;&gt;Next-of-Kin:&lt;/td&gt;&lt;td colspan=&#34;3&#34;&gt;&lt;ul&gt;&lt;li&gt; Vikash &lt;/li&gt;&lt;li&gt; Bangalore&lt;/li&gt;&lt;li&gt;&lt;a href=&#34;tel:+33(237)998327&#34;&gt;+33 (237) 998327&lt;/a&gt;&lt;/li&gt;&lt;li&gt; Valid Period: 2012 --&amp;gt; (ongoing)&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&#34;background-color: #f3f5da&#34; title=&#34;Patient Links&#34;&gt;Links:&lt;/td&gt;&lt;td colspan=&#34;3&#34;&gt;&lt;ul&gt;&lt;li&gt; Managing Organization:&lt;a href=&#34;organization-example-gastro.html&#34;&gt;Organization/1&lt;/a&gt;  &amp;quot;Gastroenterology&amp;quot;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/text&gt;&lt;identifier&gt;&lt;use value=&#34;usual&#34;/&gt;&lt;type&gt;&lt;coding&gt;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0203&#34;/&gt;&lt;code value=&#34;MR&#34;/&gt;&lt;/coding&gt;&lt;/type&gt;&lt;system value=&#34;urn:oid:1.2.36.146.595.217.0.1&#34;/&gt;&lt;value value=&#34;12345&#34;/&gt;&lt;period&gt;&lt;start value=&#34;2001-05-06&#34;/&gt;&lt;/period&gt;&lt;assigner&gt;&lt;display value=&#34;Acme Healthcare&#34;/&gt;&lt;/assigner&gt;&lt;/identifier&gt;&lt;active value=&#34;true&#34;/&gt;&lt;name&gt;&lt;use value=&#34;official&#34;/&gt;&lt;family value=&#34;Chalmers&#34;/&gt;&lt;given value=&#34;Peter&#34;/&gt;&lt;given value=&#34;James&#34;/&gt;&lt;/name&gt;&lt;name&gt;&lt;use value=&#34;usual&#34;/&gt;&lt;given value=&#34;Jim&#34;/&gt;&lt;/name&gt;&lt;name&gt;&lt;use value=&#34;maiden&#34;/&gt;&lt;family value=&#34;Windsor&#34;/&gt;&lt;given value=&#34;Peter&#34;/&gt;&lt;given value=&#34;James&#34;/&gt;&lt;period&gt;&lt;end value=&#34;2002&#34;/&gt;&lt;/period&gt;&lt;/name&gt;&lt;telecom&gt;&lt;use value=&#34;home&#34;/&gt;&lt;/telecom&gt;&lt;telecom&gt;&lt;system value=&#34;phone&#34;/&gt;&lt;value value=&#34;(03) 5555 6473&#34;/&gt;&lt;use value=&#34;work&#34;/&gt;&lt;rank value=&#34;1&#34;/&gt;&lt;/telecom&gt;&lt;telecom&gt;&lt;system value=&#34;phone&#34;/&gt;&lt;value value=&#34;(03) 3410 5613&#34;/&gt;&lt;use value=&#34;mobile&#34;/&gt;&lt;rank value=&#34;2&#34;/&gt;&lt;/telecom&gt;&lt;telecom&gt;&lt;system value=&#34;phone&#34;/&gt;&lt;value value=&#34;(03) 5555 8834&#34;/&gt;&lt;use value=&#34;old&#34;/&gt;&lt;period&gt;&lt;end value=&#34;2014&#34;/&gt;&lt;/period&gt;&lt;/telecom&gt;&lt;gender value=&#34;male&#34;/&gt;&lt;birthDate value=&#34;1974-12-25&#34;&gt;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/patient-birthTime&#34;&gt;&lt;valueDateTime value=&#34;1974-12-25T14:35:45-05:00&#34;/&gt;&lt;/extension&gt;&lt;/birthDate&gt;&lt;deceasedBoolean value=&#34;false&#34;/&gt;&lt;address&gt;&lt;use value=&#34;home&#34;/&gt;&lt;type value=&#34;both&#34;/&gt;&lt;text value=&#34;534 Erewhon St PeasantVille, Rainbow, Vic  3999&#34;/&gt;&lt;line value=&#34;534 Erewhon St&#34;/&gt;&lt;city value=&#34;PleasantVille&#34;/&gt;&lt;district value=&#34;Rainbow&#34;/&gt;&lt;state value=&#34;Vic&#34;/&gt;&lt;postalCode value=&#34;3999&#34;/&gt;&lt;period&gt;&lt;start value=&#34;1974-12-25&#34;/&gt;&lt;/period&gt;&lt;/address&gt;&lt;contact&gt;&lt;relationship&gt;&lt;coding&gt;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0131&#34;/&gt;&lt;code value=&#34;N&#34;/&gt;&lt;/coding&gt;&lt;/relationship&gt;&lt;name&gt;&lt;family value=&#34;du Marché&#34;&gt;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/humanname-own-prefix&#34;&gt;&lt;valueString value=&#34;VV&#34;/&gt;&lt;/extension&gt;&lt;/family&gt;&lt;given value=&#34;Bénédicte&#34;/&gt;&lt;/name&gt;&lt;telecom&gt;&lt;system value=&#34;phone&#34;/&gt;&lt;value value=&#34;+33 (237) 998327&#34;/&gt;&lt;/telecom&gt;&lt;address&gt;&lt;use value=&#34;home&#34;/&gt;&lt;type value=&#34;both&#34;/&gt;&lt;line value=&#34;534 Erewhon St&#34;/&gt;&lt;city value=&#34;PleasantVille&#34;/&gt;&lt;district value=&#34;Rainbow&#34;/&gt;&lt;state value=&#34;Vic&#34;/&gt;&lt;postalCode value=&#34;3999&#34;/&gt;&lt;period&gt;&lt;start value=&#34;1974-12-25&#34;/&gt;&lt;/period&gt;&lt;/address&gt;&lt;gender value=&#34;female&#34;/&gt;&lt;period&gt;&lt;start value=&#34;2012&#34;/&gt;&lt;/period&gt;&lt;/contact&gt;&lt;managingOrganization&gt;&lt;reference value=&#34;Organization/1&#34;/&gt;&lt;/managingOrganization&gt;&lt;/Patient&gt; "
+                                type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                     </parameter>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith="Patient"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="http://{ $Host }:{ $Port }/fhir/{}" verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/xml</header>
+                           <header name="Accept">application/xml</header>
+                        </httpHeaders>
+                        <body>{ $body }</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_FHIR_Type"
+                       maxRedirects="100"
+                       name="GET_FHIR_Type"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Reads all resources based on resource type. </description>
+                  <input>
+                     <parameter description=""
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="http://{ $Host }:{ $Port }/fhir/{ $Type }" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="DELETE_FHIR_Type"
+                       maxRedirects="100"
+                       name="DELETE_FHIR_Type"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Deletes resources based on resource type.</description>
+                  <input>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/{ $Type }" verb="DELETE">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_FHIR_Type_Id_History"
+                       maxRedirects="100"
+                       name="GET_FHIR_Type_Id_History"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Reads a resource based on the resource type, ID, and history.</description>
+                  <input>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                     <parameter description=""
+                                label="ID"
+                                name="ID"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/{ $Type }/{ $ID }/_history"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_FHIR_Type_History"
+                       maxRedirects="100"
+                       name="GET_FHIR_Type_History"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Gets the history of all the mentioned resources.</description>
+                  <input>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                nogen="true"
+                                required="true"
+                                testWith=""
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/{ $Type }/_history" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="GET_FHIR_Metadata"
+                       maxRedirects="100"
+                       name="GET_FHIR_Metadata"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Gets the Capability Statement of the FHIR server. </description>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding url="https://{ $Host }:{ $Port }/fhir/metadata" verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">FHIR_Response</option>
+                           <option name="guid">FHIR_Response</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="POST_FHIR_Bundle"
+                       maxRedirects="100"
+                       name="POST_FHIR_Bundle"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Customized Action to post a FHIR Bundle to the server based on the type of the bundle. </description>
+                  <input>
+                     <parameter description="Request Body"
+                                label="Body"
+                                name="Body"
+                                required="true"
+                                testWith="&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&#xA;&lt;Bundle xmlns=&#34;http://hl7.org/fhir&#34; xmlns:xhtml=&#34;http://www.w3.org/1999/xhtml&#34; xmlns:xml=&#34;http://www.w3.org/XML/1998/namespace&#34; xmlns:xsi=&#34;http://www.w3.org/2001/XMLSchema-instance&#34;&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;1795117001&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;type value=&#34;transaction&#34;&gt;&#xA;&lt;/type&gt;&#xA;&lt;timestamp value=&#34;2022-09-03T09:05:01.000Z&#34;&gt;&#xA;&lt;/timestamp&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/MessageHeader/7910f0b6-19b5-11ef-bf8d-cfe893c180c2&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;MessageHeader&gt;&#xA;&lt;id value=&#34;7910f0b6-19b5-11ef-bf8d-cfe893c180c2&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;meta&gt;&#xA;&lt;security&gt;&#xA;&lt;display value=&#34;SECURITY&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/security&gt;&#xA;&lt;tag&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0103&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;D&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/tag&gt;&#xA;&lt;/meta&gt;&#xA;&lt;eventCoding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0003&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;A01&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;ADT^A01^ADT_A01&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/eventCoding&gt;&#xA;&lt;destination&gt;&#xA;&lt;name value=&#34;LABADT&#34;&gt;&#xA;&lt;/name&gt;&#xA;&lt;endpoint&gt;&#xA;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/data-absent-reason&#34;&gt;&#xA;&lt;valueCode value=&#34;unknown&#34;&gt;&#xA;&lt;/valueCode&gt;&#xA;&lt;/extension&gt;&#xA;&lt;/endpoint&gt;&#xA;&lt;receiver&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Organization/791124f0-19b5-11ef-bf8f-ab73d995fe54&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/receiver&gt;&#xA;&lt;/destination&gt;&#xA;&lt;sender&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Organization/791115be-19b5-11ef-bf8e-9bc02692ab4a&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/sender&gt;&#xA;&lt;source&gt;&#xA;&lt;name value=&#34;ADT1&#34;&gt;&#xA;&lt;/name&gt;&#xA;&lt;endpoint&gt;&#xA;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/data-absent-reason&#34;&gt;&#xA;&lt;valueCode value=&#34;unknown&#34;&gt;&#xA;&lt;/valueCode&gt;&#xA;&lt;/extension&gt;&#xA;&lt;/endpoint&gt;&#xA;&lt;/source&gt;&#xA;&lt;focus&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/focus&gt;&#xA;&lt;/MessageHeader&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;MessageHeader&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Organization/791115be-19b5-11ef-bf8e-9bc02692ab4a&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Organization&gt;&#xA;&lt;id value=&#34;791115be-19b5-11ef-bf8e-9bc02692ab4a&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;MCM211&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;/Organization&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Organization?identifier=MCM211&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Organization/791124f0-19b5-11ef-bf8f-ab73d995fe54&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Organization&gt;&#xA;&lt;id value=&#34;791124f0-19b5-11ef-bf8f-ab73d995fe54&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;MCM232&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;/Organization&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Organization?identifier=MCM232&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Patient&gt;&#xA;&lt;id value=&#34;79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;type&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0203&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;U&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;Unspecified identifier&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/type&gt;&#xA;&lt;value value=&#34;36708311423416&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;identifier&gt;&#xA;&lt;type&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0203&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;SB&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/type&gt;&#xA;&lt;value value=&#34;123456789&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;identifier&gt;&#xA;&lt;type&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0203&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;DL&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/type&gt;&#xA;&lt;system value=&#34;http://unknown-system.com/NC&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;value value=&#34;9-87654&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;name&gt;&#xA;&lt;family value=&#34;Rosales&#34;&gt;&#xA;&lt;/family&gt;&#xA;&lt;given value=&#34;Willis&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;given value=&#34;A&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;suffix value=&#34;III&#34;&gt;&#xA;&lt;/suffix&gt;&#xA;&lt;/name&gt;&#xA;&lt;birthDate value=&#34;1968-09-02&#34;&gt;&#xA;&lt;extension url=&#34;http://hl7.org/fhir/StructureDefinition/patient-birthTime&#34;&gt;&#xA;&lt;valueDateTime value=&#34;1968-09-02T11:05:01.000Z&#34;&gt;&#xA;&lt;/valueDateTime&gt;&#xA;&lt;/extension&gt;&#xA;&lt;/birthDate&gt;&#xA;&lt;address&gt;&#xA;&lt;line value=&#34;797 Gilreath Rd&#34;&gt;&#xA;&lt;/line&gt;&#xA;&lt;city value=&#34;Tylerton&#34;&gt;&#xA;&lt;/city&gt;&#xA;&lt;district value=&#34;GL&#34;&gt;&#xA;&lt;/district&gt;&#xA;&lt;state value=&#34;MD&#34;&gt;&#xA;&lt;/state&gt;&#xA;&lt;postalCode value=&#34;21866&#34;&gt;&#xA;&lt;/postalCode&gt;&#xA;&lt;/address&gt;&#xA;&lt;maritalStatus&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-MaritalStatus&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;S&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;Never Married&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/maritalStatus&gt;&#xA;&lt;contact&gt;&#xA;&lt;name&gt;&#xA;&lt;family value=&#34;Garrison&#34;&gt;&#xA;&lt;/family&gt;&#xA;&lt;given value=&#34;Ernest&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;given value=&#34;K&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;given value=&#34;A&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;/name&gt;&#xA;&lt;period&gt;&#xA;&lt;start value=&#34;2001-11-05&#34;&gt;&#xA;&lt;/start&gt;&#xA;&lt;/period&gt;&#xA;&lt;/contact&gt;&#xA;&lt;/Patient&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Patient?identifier=36708311423416&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Account/791193c2-19b5-11ef-bf92-7f835e9dc117&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Account&gt;&#xA;&lt;id value=&#34;791193c2-19b5-11ef-bf92-7f835e9dc117&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;PATID12322145001&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;status value=&#34;active&#34;&gt;&#xA;&lt;/status&gt;&#xA;&lt;subject&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/subject&gt;&#xA;&lt;/Account&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Account?identifier=PATID12322145001&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/RelatedPerson/7911a8b2-19b5-11ef-bf93-c738ddc8d553&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;RelatedPerson&gt;&#xA;&lt;id value=&#34;7911a8b2-19b5-11ef-bf93-c738ddc8d553&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;patient&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/patient&gt;&#xA;&lt;relationship&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-RoleCode&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;SPS&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;spouse&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/relationship&gt;&#xA;&lt;name&gt;&#xA;&lt;family value=&#34;Garrison&#34;&gt;&#xA;&lt;/family&gt;&#xA;&lt;given value=&#34;Ernest&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;given value=&#34;K&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;/name&gt;&#xA;&lt;period&gt;&#xA;&lt;start value=&#34;2001-11-05&#34;&gt;&#xA;&lt;/start&gt;&#xA;&lt;/period&gt;&#xA;&lt;/RelatedPerson&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;RelatedPerson&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/RelatedPerson/7911cdf6-19b5-11ef-bf94-2ff0918bc83f&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;RelatedPerson&gt;&#xA;&lt;id value=&#34;7911cdf6-19b5-11ef-bf94-2ff0918bc83f&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;patient&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/patient&gt;&#xA;&lt;relationship&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-RoleCode&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;FTH&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;father&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/relationship&gt;&#xA;&lt;name&gt;&#xA;&lt;family value=&#34;Garrison&#34;&gt;&#xA;&lt;/family&gt;&#xA;&lt;given value=&#34;Evelyn&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;given value=&#34;A&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;/name&gt;&#xA;&lt;/RelatedPerson&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;RelatedPerson&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Encounter/79120014-19b5-11ef-bf97-7f10fe78f864&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Encounter&gt;&#xA;&lt;id value=&#34;79120014-19b5-11ef-bf97-7f10fe78f864&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;status value=&#34;in-progress&#34;&gt;&#xA;&lt;/status&gt;&#xA;&lt;class&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-ActCode&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;IMP&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;inpatient encounter&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/class&gt;&#xA;&lt;serviceType&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v2-0069&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;SUR&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;Surgical Service&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/serviceType&gt;&#xA;&lt;subject&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/subject&gt;&#xA;&lt;participant&gt;&#xA;&lt;type&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-ParticipationType&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;ATND&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;attender&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/type&gt;&#xA;&lt;individual&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Practitioner/79124308-19b5-11ef-bf9e-cb5f7e888e17&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/individual&gt;&#xA;&lt;/participant&gt;&#xA;&lt;participant&gt;&#xA;&lt;type&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-ParticipationType&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;REF&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;referrer&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/type&gt;&#xA;&lt;individual&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Practitioner/791255d2-19b5-11ef-bf9f-bbd6902c78f6&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/individual&gt;&#xA;&lt;/participant&gt;&#xA;&lt;participant&gt;&#xA;&lt;type&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/v3-ParticipationType&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;CON&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;consultant&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/type&gt;&#xA;&lt;individual&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Practitioner/7912636a-19b5-11ef-bfa0-1b1623bc21ab&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/individual&gt;&#xA;&lt;/participant&gt;&#xA;&lt;location&gt;&#xA;&lt;location&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Location/79121914-19b5-11ef-bf99-b7df3f4fc560&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/location&gt;&#xA;&lt;status value=&#34;active&#34;&gt;&#xA;&lt;/status&gt;&#xA;&lt;/location&gt;&#xA;&lt;/Encounter&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Encounter&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Location/791217e8-19b5-11ef-bf98-f71ea3ec1860&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Location&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;2000OperationTheatre&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;mode value=&#34;instance&#34;&gt;&#xA;&lt;/mode&gt;&#xA;&lt;physicalType&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/location-physical-type&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;wa&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/physicalType&gt;&#xA;&lt;/Location&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Location?identifier=2000OperationTheatre&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Location/79121914-19b5-11ef-bf99-b7df3f4fc560&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Location&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;2012SurgeryRoom&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;mode value=&#34;instance&#34;&gt;&#xA;&lt;/mode&gt;&#xA;&lt;physicalType&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/location-physical-type&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;ro&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/physicalType&gt;&#xA;&lt;partOf&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Location/791217e8-19b5-11ef-bf98-f71ea3ec1860&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/partOf&gt;&#xA;&lt;/Location&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Location?identifier=2012SurgeryRoom&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Practitioner/79124308-19b5-11ef-bf9e-cb5f7e888e17&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Practitioner&gt;&#xA;&lt;id value=&#34;79124308-19b5-11ef-bf9e-cb5f7e888e17&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;441258&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;name&gt;&#xA;&lt;family value=&#34;LEBAUER&#34;&gt;&#xA;&lt;/family&gt;&#xA;&lt;given value=&#34;Mae&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;given value=&#34;J.&#34;&gt;&#xA;&lt;/given&gt;&#xA;&lt;/name&gt;&#xA;&lt;/Practitioner&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Practitioner?identifier=441258&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Practitioner/791255d2-19b5-11ef-bf9f-bbd6902c78f6&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Practitioner&gt;&#xA;&lt;id value=&#34;791255d2-19b5-11ef-bf9f-bbd6902c78f6&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;7575435&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;/Practitioner&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Practitioner?identifier=7575435&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Practitioner/7912636a-19b5-11ef-bfa0-1b1623bc21ab&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Practitioner&gt;&#xA;&lt;id value=&#34;7912636a-19b5-11ef-bfa0-1b1623bc21ab&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;identifier&gt;&#xA;&lt;value value=&#34;922257&#34;&gt;&#xA;&lt;/value&gt;&#xA;&lt;/identifier&gt;&#xA;&lt;/Practitioner&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;PUT&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Practitioner?identifier=922257&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/AllergyIntolerance/7912768e-19b5-11ef-bfa1-9f9162a8286f&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;AllergyIntolerance&gt;&#xA;&lt;id value=&#34;7912768e-19b5-11ef-bfa1-9f9162a8286f&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;clinicalStatus&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;active&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/clinicalStatus&gt;&#xA;&lt;patient&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/patient&gt;&#xA;&lt;reaction&gt;&#xA;&lt;manifestation&gt;&#xA;&lt;text value=&#34;CODE16&#34;&gt;&#xA;&lt;/text&gt;&#xA;&lt;/manifestation&gt;&#xA;&lt;manifestation&gt;&#xA;&lt;text value=&#34;CODE17&#34;&gt;&#xA;&lt;/text&gt;&#xA;&lt;/manifestation&gt;&#xA;&lt;manifestation&gt;&#xA;&lt;text value=&#34;CODE18&#34;&gt;&#xA;&lt;/text&gt;&#xA;&lt;/manifestation&gt;&#xA;&lt;/reaction&gt;&#xA;&lt;/AllergyIntolerance&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;AllergyIntolerance&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/AllergyIntolerance/791288cc-19b5-11ef-bfa2-0b82f3fba0c5&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;AllergyIntolerance&gt;&#xA;&lt;id value=&#34;791288cc-19b5-11ef-bfa2-0b82f3fba0c5&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;clinicalStatus&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;active&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/clinicalStatus&gt;&#xA;&lt;patient&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/patient&gt;&#xA;&lt;reaction&gt;&#xA;&lt;manifestation&gt;&#xA;&lt;text value=&#34;CODE257&#34;&gt;&#xA;&lt;/text&gt;&#xA;&lt;/manifestation&gt;&#xA;&lt;/reaction&gt;&#xA;&lt;/AllergyIntolerance&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;AllergyIntolerance&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Condition/791297cc-19b5-11ef-bfa3-2f27f8f47036&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Condition&gt;&#xA;&lt;id value=&#34;791297cc-19b5-11ef-bfa3-2f27f8f47036&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;code&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://unknown-system.com&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;1550&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/code&gt;&#xA;&lt;subject&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/subject&gt;&#xA;&lt;onsetDateTime value=&#34;1988-05-01T10:30:05.000Z&#34;&gt;&#xA;&lt;/onsetDateTime&gt;&#xA;&lt;/Condition&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Condition&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;entry&gt;&#xA;&lt;fullUrl value=&#34;http://invvector01:5555/fhir/Procedure/7912afc8-19b5-11ef-bfa4-c7b8425fc830&#34;&gt;&#xA;&lt;/fullUrl&gt;&#xA;&lt;resource&gt;&#xA;&lt;Procedure&gt;&#xA;&lt;id value=&#34;7912afc8-19b5-11ef-bfa4-c7b8425fc830&#34;&gt;&#xA;&lt;/id&gt;&#xA;&lt;status value=&#34;unknown&#34;&gt;&#xA;&lt;/status&gt;&#xA;&lt;code&gt;&#xA;&lt;coding&gt;&#xA;&lt;system value=&#34;http://unknown-system.com&#34;&gt;&#xA;&lt;/system&gt;&#xA;&lt;code value=&#34;111&#34;&gt;&#xA;&lt;/code&gt;&#xA;&lt;display value=&#34;CODE151&#34;&gt;&#xA;&lt;/display&gt;&#xA;&lt;/coding&gt;&#xA;&lt;/code&gt;&#xA;&lt;subject&gt;&#xA;&lt;reference value=&#34;http://invvector01:5555/fhir/Patient/79113698-19b5-11ef-bf90-b767306d66a3&#34;&gt;&#xA;&lt;/reference&gt;&#xA;&lt;/subject&gt;&#xA;&lt;performedDateTime value=&#34;1988-09-08T11:23:00.000Z&#34;&gt;&#xA;&lt;/performedDateTime&gt;&#xA;&lt;/Procedure&gt;&#xA;&lt;/resource&gt;&#xA;&lt;request&gt;&#xA;&lt;method value=&#34;POST&#34;&gt;&#xA;&lt;/method&gt;&#xA;&lt;url value=&#34;Procedure&#34;&gt;&#xA;&lt;/url&gt;&#xA;&lt;/request&gt;&#xA;&lt;/entry&gt;&#xA;&lt;/Bundle&gt;"
+                                type="reference">
+                        <options>
+                           <option name="referenceTo">$any</option>
+                        </options>
+                     </parameter>
+                     <parameter description="Resource Type"
+                                label="Type"
+                                name="Type"
+                                required="true"
+                                testWith="/"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding url="http://{ $Host }:{ $Port }/fhir{ $Type }" verb="POST">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/xml</header>
+                           <header name="Accept">application/xml</header>
+                        </httpHeaders>
+                        <body>{$Body}</body>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="relationshipName">Child</option>
+                           <option name="referenceTo">$po:$any</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+               <action category="FHIR"
+                       failOnError="true"
+                       forSearch="false"
+                       isAbstract="false"
+                       label="OPTIONS_FHIR"
+                       maxRedirects="100"
+                       name="OPTIONS_FHIR"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description>Gets the capability statement of the FHIR server and its supported operations.</description>
+                  <input/>
+                  <binding>
+                     <restSimpleBinding url="http://{ $Host }:{ $Port }/fhir" verb="OPTIONS">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Accept">application/json</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description="Success"
+                            entireResponse="true"
+                            name="FHIR_Response"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">FhirResponse</option>
+                        </options>
+                     </field>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="FHIR_Response">
+                  <description>Response from the FHIR server</description>
+                  <detail>
+                     <field label="isValid"
+                            name="isValid"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field label="hasBody"
+                            name="hasBody"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>aInrcykvRqwh0eOcPXtcQ3</types1:GUID>
+      <types1:DisplayName>FHIR_Connector</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-25T14:36:19.343Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

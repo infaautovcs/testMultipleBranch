@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "0UrovFU1MstbLL3AuR92Wg",
+    "name" : "AppConnForFHIR",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ELaabclvAhrswVY-gt-49865-2024-05-21T09:06:04.858Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.758Z",
+  "objectRefs" : [ {
+    "id" : "97vB2WkGRQ3byvLPkndSy6",
+    "name" : "FHIR-SC",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "x4GkRCU7uMydx2C-gt-49837-2024-05-21T09:06:03.859Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Spark API",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "5gaxNhJjY8ij5KrZgemj4G",
+    "name" : "AppConnectionforFHIR",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "RjxcghuImXycotF-gt-144278-2025-07-07T06:16:05.701Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Defines actions that you can perform using a pre-defined FHIR service connector",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.765Z",
+  "objectRefs" : [ {
+    "id" : "fnJ7c8bSX8MkltV14JCKES",
+    "name" : "FHIR_Connector",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "jlTonQYWeIssjql-gt-150400-2025-07-07T06:16:05.148Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Bi-directional service connector that can be used to retrieve or send data to the FHIR server",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

@@ -1,0 +1,87 @@
+{
+  "objectInfo" : {
+    "id" : "7ZRzXoBhhemdtwBPh7t88i",
+    "name" : "HL7_ADTA01_to_FHIR_R4_Conversion_Process",
+    "type" : "PROCESS",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "IJ1reK8ZAZf5kck-gt-49885-2024-05-21T09:06:05.619Z::pd.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T14:36:20.780Z",
+  "objectRefs" : [ {
+    "id" : "aIZ2d1AzY7seSQoY4dvOqS",
+    "name" : "payloadObject",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "Fdppppppppppppp-gt-49875-2024-05-21T09:06:05.005Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Process object for the getting the objects from the input payload",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask"
+  }, {
+    "id" : "0UrovFU1MstbLL3AuR92Wg",
+    "name" : "AppConnForFHIR",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "ELaabclvAhrswVY-gt-49865-2024-05-21T09:06:04.858Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask"
+  }, {
+    "id" : "73TpVNF8v4cltgqafbq0gr",
+    "name" : "ConnectionForDataServiceAPIServiceConnector",
+    "type" : "AI_CONNECTION",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "CnNZPD4ARW8UBM7-gt-49855-2024-05-21T09:06:04.606Z::conn.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Defines actions that you can perform using DataServiceAPI_Service_Connector ",
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/00_SwatiTestLDMNewTask"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

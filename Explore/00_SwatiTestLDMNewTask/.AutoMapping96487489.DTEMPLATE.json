@@ -1,0 +1,30 @@
+{
+  "objectInfo" : {
+    "id" : "0c9aCWM0PQHi4ABFtwjI4z",
+    "name" : "AutoMapping96487489",
+    "type" : "DTEMPLATE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "01227E17000000001YMQ"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "Extracts all or a subset of data from a source and loads it to a dynamically created target.\n\nIf you create a relational target, the Mapping task inserts data into the target table the first time it runs. Subsequent runs can load data using update or upsert operations. If you create a flat file target, the Mapping task re-creates the target file each time it runs.",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "updateTime" : "2025-08-25T14:36:20.735Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : "json",
+  "readableFilePresent" : true
+}

@@ -1,0 +1,42 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>CnNZPD4ARW8UBM7-gt-49855-2024-05-21T09:06:04.606Z::conn.xml</types1:EntryId>
+      <types1:Name>ConnectionForDataServiceAPIServiceConnector-5</types1:Name>
+      <types1:ParentFlowIds>IJ1reK8ZAZf5kck-gt-49885-2024-05-21T09:06:05.619Z::pd.xml,oDdvrTdtqSLlBWl-gt-144298-2025-07-07T06:16:06.234Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+connection</types1:MimeType>
+      <types1:Description>Defines actions that you can perform using DataServiceAPI_Service_Connector </types1:Description>
+      <types1:AppliesTo/>
+      <types1:Tags>.agent:tavubugwdev8.informatica.com_old</types1:Tags>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>platformqa</types1:CreatedBy>
+      <types1:CreationDate>2024-05-21T09:06:05Z</types1:CreationDate>
+      <types1:ModifiedBy>platformqa</types1:ModifiedBy>
+      <types1:ModificationDate>2025-07-07T06:16:06Z</types1:ModificationDate>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <connection xmlns="http://schemas.informatica.com/socrates/data-services/2014/04/avosConnections.xsd"
+                     displayName="ConnectionForDataServiceAPIServiceConnector"
+                     label="ConnectionForDataServiceAPIServiceConnector"
+                     name="ConnectionForDataServiceAPIServiceConnector-5">
+            <description>Defines actions that you can perform using DataServiceAPI_Service_Connector </description>
+            <tags>.agent:tavubugwdev8.informatica.com_old</tags>
+            <agent>tavubugwdev8.informatica.com_old</agent>
+            <businessConnector xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd"
+                               agentOnly="false"
+                               connectorPath="project:/rt.connector/DataServiceAPIServiceConnector_1/DataServiceAPIServiceConnector_1_svcDef.xml"
+                               guid="2eI05wZuWISjhaakD0fi8i"
+                               name="DataServiceAPIServiceConnector-5"
+                               supportsConnectionTest="false"
+                               uuid="782fe1a2-75ac-43f2-97db-2f443a8ddda6">
+               <description>Service Connector for Job REST API</description>
+            </businessConnector>
+         </connection>
+      </types1:Entry>
+      <types1:GUID>73TpVNF8v4cltgqafbq0gr</types1:GUID>
+      <types1:DisplayName>ConnectionForDataServiceAPIServiceConnector</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-25T14:36:19.301Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
