@@ -1,0 +1,1433 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "name" : "AutoDeploy_CMD",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "SRC_Empccccccc -> Expression"
+      },
+      {
+        "link" : "Expression -> Target"
+      }
+    ],
+    "parameters" : [
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "label" : "LKPCond_Param",
+        "name" : "LKPCond_Param",
+        "defaultValue" : {
+          "valueLiteral" : "Emp_ID"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "IncomingF_Param",
+        "defaultValue" : {
+          "valueLiteral" : "Emp_ID"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "LKPConn_Param",
+        "defaultValue" : {
+          "valueLiteral" : "FF"
+        },
+        "anonymousType" : {
+          "connectionType" : "Flat File"
+        }
+      },
+      {
+        "input" : "true",
+        "output" : "false",
+        "precision" : 0,
+        "scale" : 0,
+        "allowRuntimeOverride" : "false",
+        "expressionVariable" : "false",
+        "name" : "LookupCondition_FullParam",
+        "defaultValue" : {
+          "valueLiteral" : "EmpId=Emp_ID"
+        }
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2019-06-11T16:26:37.613Z",
+        "name" : "SRC_Empccccccc",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "Emp_ID"
+            },
+            "name" : "Emp_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Name_Prefix"
+            },
+            "name" : "Name_Prefix",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "First_Name"
+            },
+            "name" : "First_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Middle_Initial"
+            },
+            "name" : "Middle_Initial",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Last_Name"
+            },
+            "name" : "Last_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Gender"
+            },
+            "name" : "Gender",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "E_Mail"
+            },
+            "name" : "E_Mail",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Father_s_Name"
+            },
+            "name" : "Father_s_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mother_s_Name"
+            },
+            "name" : "Mother_s_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mother_s_Maiden_Name"
+            },
+            "name" : "Mother_s_Maiden_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Date_of_Birth"
+            },
+            "name" : "Date_of_Birth",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Time_of_Birth"
+            },
+            "name" : "Time_of_Birth",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Age_in_Yrs_"
+            },
+            "name" : "Age_in_Yrs_",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Weight_in_Kgs_"
+            },
+            "name" : "Weight_in_Kgs_",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Date_of_Joining"
+            },
+            "name" : "Date_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Quarter_of_Joining"
+            },
+            "name" : "Quarter_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Half_of_Joining"
+            },
+            "name" : "Half_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Year_of_Joining"
+            },
+            "name" : "Year_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Month_of_Joining"
+            },
+            "name" : "Month_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Month_Name_of_Joining"
+            },
+            "name" : "Month_Name_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Short_Month"
+            },
+            "name" : "Short_Month",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Day_of_Joining"
+            },
+            "name" : "Day_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "DOW_of_Joining"
+            },
+            "name" : "DOW_of_Joining",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Short_DOW"
+            },
+            "name" : "Short_DOW",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Age_in_Company__Years_"
+            },
+            "name" : "Age_in_Company__Years_",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Salary"
+            },
+            "name" : "Salary",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Last___Hike"
+            },
+            "name" : "Last___Hike",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SSN"
+            },
+            "name" : "SSN",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Phone_No_"
+            },
+            "name" : "Phone_No_",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Place_Name"
+            },
+            "name" : "Place_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "County"
+            },
+            "name" : "County",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "City"
+            },
+            "name" : "City",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "State"
+            },
+            "name" : "State",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Zip"
+            },
+            "name" : "Zip",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Region"
+            },
+            "name" : "Region",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "User_Name"
+            },
+            "name" : "User_Name",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Password"
+            },
+            "name" : "Password",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "P_ID"
+            },
+            "name" : "P_ID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@h8oKSaDDCuIl8uh1kQI8Ig",
+          "connectionName" : "FF",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "emp_2.csv",
+            "label" : "emp_2.csv",
+            "path" : "emp_2.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "Emp_ID",
+                "fieldType" : "UNDEFINED",
+                "label" : "Emp_ID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Name_Prefix",
+                "fieldType" : "UNDEFINED",
+                "label" : "Name_Prefix",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "First_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "First_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Middle_Initial",
+                "fieldType" : "UNDEFINED",
+                "label" : "Middle_Initial",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Last_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "Last_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Gender",
+                "fieldType" : "UNDEFINED",
+                "label" : "Gender",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "E_Mail",
+                "fieldType" : "UNDEFINED",
+                "label" : "E_Mail",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Father_s_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "Father_s_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Mother_s_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "Mother_s_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Mother_s_Maiden_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "Mother_s_Maiden_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Date_of_Birth",
+                "fieldType" : "UNDEFINED",
+                "label" : "Date_of_Birth",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Time_of_Birth",
+                "fieldType" : "UNDEFINED",
+                "label" : "Time_of_Birth",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Age_in_Yrs_",
+                "fieldType" : "UNDEFINED",
+                "label" : "Age_in_Yrs_",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Weight_in_Kgs_",
+                "fieldType" : "UNDEFINED",
+                "label" : "Weight_in_Kgs_",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Date_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Date_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Quarter_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Quarter_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Half_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Half_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Year_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Year_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Month_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Month_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Month_Name_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Month_Name_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Short_Month",
+                "fieldType" : "UNDEFINED",
+                "label" : "Short_Month",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Day_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "Day_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "DOW_of_Joining",
+                "fieldType" : "UNDEFINED",
+                "label" : "DOW_of_Joining",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Short_DOW",
+                "fieldType" : "UNDEFINED",
+                "label" : "Short_DOW",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Age_in_Company__Years_",
+                "fieldType" : "UNDEFINED",
+                "label" : "Age_in_Company__Years_",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Salary",
+                "fieldType" : "UNDEFINED",
+                "label" : "Salary",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Last___Hike",
+                "fieldType" : "UNDEFINED",
+                "label" : "Last___Hike",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "SSN",
+                "fieldType" : "UNDEFINED",
+                "label" : "SSN",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Phone_No_",
+                "fieldType" : "UNDEFINED",
+                "label" : "Phone_No_",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Place_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "Place_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "County",
+                "fieldType" : "UNDEFINED",
+                "label" : "County",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "City",
+                "fieldType" : "UNDEFINED",
+                "label" : "City",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "State",
+                "fieldType" : "UNDEFINED",
+                "label" : "State",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Zip",
+                "fieldType" : "UNDEFINED",
+                "label" : "Zip",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Region",
+                "fieldType" : "UNDEFINED",
+                "label" : "Region",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "User_Name",
+                "fieldType" : "UNDEFINED",
+                "label" : "User_Name",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Password",
+                "fieldType" : "UNDEFINED",
+                "label" : "Password",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "P_ID",
+                "fieldType" : "UNDEFINED",
+                "label" : "P_ID",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "emp_2.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2019-06-11T16:26:37.615Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "sessionProperties" : [
+          {
+            "name" : "Append if Exists",
+            "value" : "NO"
+          },
+          {
+            "name" : "Header Options",
+            "value" : "Output Field Names"
+          },
+          {
+            "name" : "Output Type",
+            "value" : "File"
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@h8oKSaDDCuIl8uh1kQI8Ig",
+          "connectionName" : "FF",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "6_LKP.csv",
+            "label" : "6_LKP.csv",
+            "path" : "6_LKP.csv",
+            "retainMetadata" : "false",
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2019-06-11T16:36:09.895Z",
+        "name" : "Lookup_Orders",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Lookup cache directory name",
+            "value" : "$PMCacheDir"
+          },
+          {
+            "name" : "Lookup cache persistent",
+            "value" : "false"
+          },
+          {
+            "name" : "Lookup Data Cache Size",
+            "value" : "AUTO"
+          },
+          {
+            "name" : "Lookup Index Cache Size",
+            "value" : "AUTO"
+          },
+          {
+            "name" : "Thousand Separator",
+            "value" : "None"
+          },
+          {
+            "name" : "Decimal Separator",
+            "value" : "."
+          },
+          {
+            "name" : "Case Sensitive String Comparison",
+            "value" : "false"
+          },
+          {
+            "name" : "Sorted Input",
+            "value" : "false"
+          },
+          {
+            "name" : "Lookup source is static",
+            "value" : "false"
+          },
+          {
+            "name" : "Pre-build lookup cache",
+            "value" : "AUTO"
+          },
+          {
+            "name" : "Optional",
+            "value" : "true"
+          }
+        ],
+        "multipleMatchPolicy" : "Use Any Value",
+        "returnPortName" : "OrderId",
+        "unconnected" : "true",
+        "useLabels" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "EmpId"
+            },
+            "name" : "EmpId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "OrderId"
+            },
+            "name" : "OrderId",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "pid"
+            },
+            "name" : "pid",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 255,
+            "scale" : 0
+          }
+        ],
+        "inputPortNames" : [
+          "Emp_ID",
+          "P_ID"
+        ],
+        "lookupConditions" : [
+          {
+            "leftOperand" : "EmpId",
+            "operator" : "=",
+            "rightOperand" : "Emp_ID"
+          },
+          {
+            "leftOperand" : "pid",
+            "operator" : "=",
+            "rightOperand" : "P_ID"
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@h8oKSaDDCuIl8uh1kQI8Ig",
+          "connectionName" : "FF",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "CSVFile",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "Orders_2.csv",
+            "label" : "Orders_2.csv",
+            "path" : "Orders_2.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "EmpId",
+                "fieldType" : "UNDEFINED",
+                "label" : "EmpId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Orders_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "OrderId",
+                "fieldType" : "UNDEFINED",
+                "label" : "OrderId",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Orders_2.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "pid",
+                "fieldType" : "UNDEFINED",
+                "label" : "pid",
+                "nativeType" : "nstring",
+                "original" : "false",
+                "precision" : 255,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "Orders_2.csv"
+                  }
+                ]
+              }
+            ],
+            "fileAttrs" : {
+              "consecutiveDelimiter" : "false",
+              "delimiter" : ",",
+              "firstDataRow" : 2,
+              "firstDataRowAsHeader" : "false",
+              "headerAndDataDelimiter" : 0,
+              "headerLineNo" : 1,
+              "multiDelimitersAsAnd" : "true",
+              "rowDelimiter" : 0,
+              "textQualifier" : "\""
+            }
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2019-06-11T16:37:37.810Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "lkp_out",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0,
+            "expFieldType" : "OUTPUT",
+            "expression" : ":LKP.Lookup_Orders(Emp_ID,P_ID)"
+          }
+        ]
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-08-25 14:44:10 GMT"
+}

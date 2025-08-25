@@ -1,0 +1,213 @@
+{
+  "name" : "AutoDeploy_MCT1",
+  "runtimeEnvironmentId" : "@ggeRxT1IHydcrAKrmz6qoD",
+  "runtimeEnvironmentName" : "TMS33RH64001",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$SRC_Empccccccc$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "SRC_Empccccccc",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "SRC_Empccccccc"
+      },
+      "sourceConnectionId" : "@h8oKSaDDCuIl8uh1kQI8Ig",
+      "connectionName" : "FF",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "srcFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "firstDataRow" : 2,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "firstDataRowAsHeader" : false,
+        "headerAndDataDelimiter" : 0
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "emp_2.csv",
+          "label" : "emp_2.csv",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "emp_2.csv",
+            "label" : "emp_2.csv",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Target$",
+      "type" : "TARGET",
+      "label" : "Target",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "Target"
+      },
+      "targetConnectionId" : "@h8oKSaDDCuIl8uh1kQI8Ig",
+      "connectionName" : "FF",
+      "targetObject" : "6_LKP.csv",
+      "targetObjectLabel" : "6_LKP.csv",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "tgtFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true
+      },
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "6_LKP.csv",
+      "objectLabel" : "6_LKP.csv",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Lookup_Orders$",
+      "type" : "LOOKUP",
+      "label" : "Lookup_Orders",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "multipleMatchPolicy" : "Use Any Value",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "Lookup_Orders"
+      },
+      "lookupConnectionId" : "@h8oKSaDDCuIl8uh1kQI8Ig",
+      "connectionName" : "FF",
+      "lookupObject" : "Orders_2.csv",
+      "lookupObjectLabel" : "Orders_2.csv",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "lkpFFAttrs" : {
+        "delimiter" : ",",
+        "textQualifier" : "\"",
+        "headerLineNo" : 1,
+        "firstDataRow" : 2,
+        "rowDelimiter" : 0,
+        "consecutiveDelimiter" : false,
+        "multiDelimitersAsAnd" : true,
+        "firstDataRowAsHeader" : false,
+        "headerAndDataDelimiter" : 0
+      },
+      "customFuncCfg" : { },
+      "runtimeAttrs" : {
+        "Thousand Separator" : "None",
+        "Lookup Index Cache Size" : "AUTO",
+        "Optional" : "true",
+        "Lookup cache persistent" : "false",
+        "Lookup source is static" : "false",
+        "Case Sensitive String Comparison" : "false",
+        "Decimal Separator" : ".",
+        "Lookup Data Cache Size" : "AUTO",
+        "Tracing Level" : "Normal",
+        "Sorted Input" : "false",
+        "Lookup cache directory name" : "$PMCacheDir",
+        "Pre-build lookup cache" : "AUTO"
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "Orders_2.csv",
+      "objectLabel" : "Orders_2.csv",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "mappingId" : "@alAjGqfVRCFccuAQF4NBiS",
+  "mappingTemplateName" : "AutoDeploy_CMD",
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "schemaMode" : "async",
+  "valid" : true,
+  "optimizationPlan" : "NONE",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-08-25 14:44:13 GMT"
+}
