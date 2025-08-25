@@ -62,6 +62,7 @@
       "retainFieldMetadata" : false,
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -116,6 +117,7 @@
       "objectLabel" : "PC_LTF_FF_TGT.csv",
       "useExactSrcNames" : false,
       "userUpdated" : true,
+      "fetchMode" : "ORIGINAL",
       "runtimeParameterData" : {
         "connectionRuntimeParameter" : false,
         "objectRuntimeParameter" : false
@@ -139,5 +141,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-08-25 02:03:29 PDT"
+  "vcsExportTime" : "2025-08-25 03:07:34 PDT"
 }

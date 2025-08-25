@@ -17,13 +17,13 @@
       } ],
       "additionalInfo" : {
         "description" : "Uses PC_Mapping_SQL_FF_1\r\n",
-        "contentType" : null,
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-08-25T09:03:30.116Z",
+  "updateTime" : "2025-08-25T10:07:35.375Z",
   "objectRefs" : [ {
     "id" : "el93TPotUIkfjU2TWcLbca",
     "name" : "FF_PodCertification",
@@ -102,7 +102,7 @@
       } ],
       "additionalInfo" : {
         "description" : "Pod Certification Task: Mapping has a src and a target. ",
-        "contentType" : null,
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     },

@@ -17,13 +17,13 @@
       } ],
       "additionalInfo" : {
         "description" : "",
-        "contentType" : null,
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-08-25T09:03:30.111Z",
+  "updateTime" : "2025-08-25T10:07:35.372Z",
   "objectRefs" : [ {
     "id" : "el93TPotUIkfjU2TWcLbca",
     "name" : "FF_PodCertification",

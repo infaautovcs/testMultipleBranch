@@ -17,13 +17,13 @@
       } ],
       "additionalInfo" : {
         "description" : "Pod Certifcation PCS task - Source: Sql and target: Sql",
-        "contentType" : null,
+        "contentType" : "JSON",
         "documentState" : "VALID"
       }
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-08-25T09:03:30.116Z",
+  "updateTime" : "2025-08-25T10:07:35.376Z",
   "objectRefs" : [ {
     "id" : "59cp7kyi6VjeRu5QaRuk2V",
     "name" : "TMS47W1264001",
