@@ -1,0 +1,34 @@
+{
+  "name" : "LTF_inlineActionDepen2",
+  "tasks" : [
+    {
+      "taskId" : "@46o8vn7QfsYc1A8pzwYWE2",
+      "type" : "MTT",
+      "name" : "MCT_inlineActionDepen2",
+      "stopOnError" : false,
+      "stopOnWarning" : false
+    },
+    {
+      "taskId" : "@a04RqgTxvgVlotRLiOh6MD",
+      "type" : "DRS",
+      "name" : "drs_inlineActionDepen",
+      "stopOnError" : false,
+      "stopOnWarning" : false
+    },
+    {
+      "taskId" : "@5yNda6iFOS9fsBt1i65yOV",
+      "type" : "DSS",
+      "name" : "dss_inlineActionDepen",
+      "stopOnError" : false,
+      "stopOnWarning" : false
+    },
+    {
+      "taskId" : "@74XiEoXJZypc6ZGKlVox4g",
+      "type" : "PCS",
+      "name" : "PCS_inlineActionDepen",
+      "stopOnError" : false,
+      "stopOnWarning" : false
+    }
+  ],
+  "vcsExportTime" : "2025-08-25 13:11:06 GMT"
+}

@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "8KBGgX0rLedhA1tb12bSc7",
+    "name" : "payloadObject",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "DRTyxKf3eFhBJQW-gt-73703-2025-02-12T10:57:46.476Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T13:11:08.229Z",
+  "objectRefs" : [ {
+    "id" : "654dKHuDdy7icDzM0GRU2T",
+    "name" : "ports",
+    "type" : "PROCESS_OBJECT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "sjqluQgabcjk91p-gt-72634-2025-02-12T10:57:46.302Z::po.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/sss"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

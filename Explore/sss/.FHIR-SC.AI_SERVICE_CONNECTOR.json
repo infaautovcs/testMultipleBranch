@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "b4DRYbpwm0YiKYOIPhwdYN",
+    "name" : "FHIR-SC",
+    "type" : "AI_SERVICE_CONNECTOR",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "8gig0zFMi4tciSr-gt-72624-2025-02-12T10:57:45.954Z::svc.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Spark API",
+        "contentType" : null,
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "updateTime" : "2025-08-25T13:11:08.233Z",
+  "objectRefs" : [ ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}

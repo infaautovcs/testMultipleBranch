@@ -1,0 +1,92 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>DRTyxKf3eFhBJQW-gt-73703-2025-02-12T10:57:46.476Z::po.xml</types1:EntryId>
+      <types1:Name>payloadObject-20</types1:Name>
+      <types1:ParentFlowIds>eKpcnS24FsWTzIf-gt-73719-2025-02-12T10:57:47.076Z::pd.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+processobject</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>platformqa</types1:CreatedBy>
+      <types1:CreationDate>2025-02-12T10:57:46Z</types1:CreationDate>
+      <types1:ModifiedBy/>
+      <types1:PublicationStatus>unpublished</types1:PublicationStatus>
+      <types1:Entry>
+         <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                        displayName="payloadObject"
+                        isByCopy="true"
+                        name="payloadObject-20">
+            <description/>
+            <tags/>
+            <detail>
+               <field label="agrpId"
+                      name="agrpId"
+                      nullable="true"
+                      required="false"
+                      type="string"/>
+               <field label="additionalOutputs"
+                      name="additionalOutputs"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:$any</option>
+                  </options>
+               </field>
+               <field label="input"
+                      name="input"
+                      nullable="true"
+                      required="false"
+                      type="reference">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-20</option>
+                     <option name="guid">654dKHuDdy7icDzM0GRU2T</option>
+                  </options>
+               </field>
+               <field label="output"
+                      name="output"
+                      nullable="true"
+                      required="false"
+                      type="reference">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-20</option>
+                     <option name="guid">654dKHuDdy7icDzM0GRU2T</option>
+                  </options>
+               </field>
+               <field label="additionalInputs"
+                      name="additionalInputs"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-20</option>
+                     <option name="guid">654dKHuDdy7icDzM0GRU2T</option>
+                  </options>
+               </field>
+               <field label="serviceParameters"
+                      name="serviceParameters"
+                      nullable="true"
+                      required="false"
+                      type="objectlist">
+                  <options>
+                     <option name="relationshipName">Child</option>
+                     <option name="referenceTo">$po:ports-20</option>
+                     <option name="guid">654dKHuDdy7icDzM0GRU2T</option>
+                  </options>
+               </field>
+            </detail>
+         </processObject>
+      </types1:Entry>
+      <types1:GUID>8KBGgX0rLedhA1tb12bSc7</types1:GUID>
+      <types1:DisplayName>payloadObject</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2025-08-25T13:11:04.255Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>

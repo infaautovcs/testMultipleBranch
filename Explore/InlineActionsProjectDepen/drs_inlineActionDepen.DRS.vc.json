@@ -1,0 +1,23 @@
+{
+  "name" : "drs_inlineActionDepen",
+  "maxLogs" : 10,
+  "sourceConnectionId" : "@3g8VyyOhO4yfEfHQSoF20z",
+  "sourceConnectionName" : "RP_Sql_Server201",
+  "targetConnectionId" : "@h8oKSaDDCuIl8uh1kQI8Ig",
+  "targetConnectionName" : "FF",
+  "tablePrefix" : "SF_out42",
+  "verbose" : false,
+  "fullRefresh" : true,
+  "replicateAllObjects" : true,
+  "removeDeleted" : true,
+  "queryAll" : false,
+  "srcShowLabels" : false,
+  "maxRows" : 0,
+  "stopOnError" : true,
+  "metadataMode" : 0,
+  "bulkApi" : false,
+  "base64BodySize" : 0.0,
+  "bulkApiDBTarget" : false,
+  "srcRuntimeAttrs" : { },
+  "vcsExportTime" : "2025-08-25 13:11:03 GMT"
+}
